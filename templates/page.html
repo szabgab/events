@@ -15,6 +15,8 @@
       </h1>
       <div class="content">
         {{content}}
+        Assuming local time where you are is <b><span id="now"></span></b>, the timestamps below should be correct.
+        <a href="https://github.com/szabgab/virtual-events">source</a>
       </div>
 
       {% for event in events %}
@@ -43,13 +45,28 @@
 function set_local_date() {
     // Assume a date format of "2021-04-13T19:00:00+03:00";
     // Display time in localtime of the browser.
-    const dates = document.getElementsByTagName("time");
+    
     //console.log(dates);
     //console.log(dates.length);
+    const now = new Date();
+    //console.log(now);
+    document.getElementById("now").innerHTML = now.toLocaleDateString( [], {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            timeZoneName: 'long'
+        });
+  
+
+    const dates = document.getElementsByTagName("time");
     for (let ix=0; ix < dates.length; ix++) {
         //const mydate = dates[ix].getAttribute("x-schedule");
         const mydate = dates[ix].getAttribute("datetime");
         const date = new Date(mydate);
+  
         dates[ix].innerHTML = date.toLocaleDateString( [], {
             weekday: 'long',
             year: 'numeric',
