@@ -18,15 +18,49 @@
       </div>
 
       {% for event in events %}
-        <div>
-          <a href="{{event.url}}">{{event.title}}</a> - <a href="{{event.address}}">{{event.name}}</a>
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4"><a href="{{event.url}}">{{event.title}}</a></p>
+              <p class="subtitle is-6"><a href="{{event.address}}">{{event.name}}</a></p>
+            </div>
+          </div>
+      
+          <div class="content">
+            {{event.language}}
+            <br />
+            <time datetime="{{event.start}}"></time>
+          </div>
         </div>
-        <div>
-          {{event.language}}
-          <span class="date">{{event.start}}</span>
-        </div>
+      </div>
       {% endfor %}
   </section>
   </body>
 </html>
+
+<script>
+function set_local_date() {
+    // Assume a date format of "2021-04-13T19:00:00+03:00";
+    // Display time in localtime of the browser.
+    const dates = document.getElementsByTagName("time");
+    //console.log(dates);
+    //console.log(dates.length);
+    for (let ix=0; ix < dates.length; ix++) {
+        //const mydate = dates[ix].getAttribute("x-schedule");
+        const mydate = dates[ix].getAttribute("datetime");
+        const date = new Date(mydate);
+        dates[ix].innerHTML = date.toLocaleDateString( [], {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            timeZoneName: 'long'
+        });
+    }
+}
+set_local_date();
+</script>
 

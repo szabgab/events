@@ -9,7 +9,7 @@ struct Event {
     name: String,
     address: String,
     language: String, // English
-    start: String, // 2024-06-06T18:00:00+03:00
+    start: String,    // 2024-06-06T18:00:00+03:00
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -23,9 +23,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         std::process::exit(1);
     });
 
-
-
-    let html = "Hello";
+    let html = "";
     let template = include_str!("../templates/page.html");
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
@@ -36,7 +34,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let globals = liquid::object!({
         "content": &html,
         "events": events,
-        "title": "Rust Maven demo",
+        "title": "Virtual Rust Events",
     });
     let output = template.render(&globals).unwrap();
 
