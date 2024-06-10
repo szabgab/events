@@ -40,5 +40,19 @@
   language: English
   start: 2024-06-16T18:00:00+03:00
 
+- title: Mid-month Rustful
+  url: https://www.meetup.com/rustdc/events/299346963/
+  name: Rust DC
+  address: https://www.meetup.com/rustdc/
+  language: English
+  start: 2024-06-18T19:00:00-04:00
+
+- title: Rust Study/Hack/Hang-out
+  url: https://www.meetup.com/vancouver-rust/events/298631733/
+  name: Vancouver Rust
+  address: https://www.meetup.com/vancouver-rust/
+  language: English
+  start: 2024-06-19T18:00:00-07:00
+
 
 
