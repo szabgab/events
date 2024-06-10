@@ -21,7 +21,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let text = fs::read_to_string(filename).unwrap();
 
     let now: DateTime<FixedOffset> = Utc::now().fixed_offset();
-    println!("now:  {now}");
+    //println!("now:  {now}");
 
     let events: Vec<Event> = serde_yaml::from_str(&text).unwrap_or_else(|err| {
         eprintln!("Could not parse YAML file: {err}");
