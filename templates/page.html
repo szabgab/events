@@ -17,6 +17,15 @@
         {{content}}
       </div>
 
+      {% for event in events %}
+        <div>
+          <a href="{{event.url}}">{{event.title}}</a> - <a href="{{event.address}}">{{event.name}}</a>
+        </div>
+        <div>
+          {{event.language}}
+          <span class="date">{{event.start}}</span>
+        </div>
+      {% endfor %}
   </section>
   </body>
 </html>

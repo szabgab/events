@@ -6,3 +6,6 @@ edition = "2021"
 [dependencies]
 liquid = "0.26"
 liquid-core = "0.26"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
