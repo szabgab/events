@@ -92,6 +92,15 @@
   language: English
   start: 2024-07-03T19:00:00-00:00
 
+- title: Indy.rs - with Social Distancing
+  url: https://www.meetup.com/indyrs/events/300328025/
+  name: Indy Rust
+  address: https://www.meetup.com/indyrs/
+  language: English
+  start: 2024-07-03T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+
 
 - title: Rust Hack and Learn
   url: https://www.meetup.com/rust-berlin/events/298488820/
@@ -106,5 +115,21 @@
   address: https://www.meetup.com/rust-berlin/
   language: English
   start: 2024-07-18T19:00:00+02:00
+
+- title: Indy.rs - with Social Distancing
+  url: https://www.meetup.com/indyrs/events/300328027/
+  name: Indy Rust
+  address: https://www.meetup.com/indyrs/
+  language: English
+  start: 2024-08-07T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+- title: Indy.rs - with Social Distancing
+  url: https://www.meetup.com/indyrs/events/300328029/
+  name: Indy Rust
+  address: https://www.meetup.com/indyrs/
+  language: English
+  start: 2024-09-07T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
 
 
