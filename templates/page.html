@@ -24,6 +24,22 @@
           <option value="7">7 days</option>
           <option value="30">30 days</option>
         </select>
+        Event starting between 
+        <select id="start">
+          <option value="0">0</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="16">16</option>
+        </select> - 
+        <select id="end">
+          <option value="16">16</option>
+          <option value="20">20</option>
+          <option value="22">22</option>
+          <option value="24">24</option>
+        </select>
+        hours in your local time.
+
       </div>
 
       {% for event in events %}
@@ -52,21 +68,6 @@
 function set_local_date() {
     // Assume a date format of "2021-04-13T19:00:00+03:00";
     // Display time in localtime of the browser.
-    
-    //console.log(dates);
-    //console.log(dates.length);
-    const now = new Date();
-    //console.log(now);
-    document.getElementById("now").innerHTML = now.toLocaleDateString( [], {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: 'numeric',
-            minute: 'numeric',
-            timeZoneName: 'long'
-        });
-  
 
     const dates = document.getElementsByTagName("time");
     for (let ix=0; ix < dates.length; ix++) {
@@ -87,28 +88,65 @@ function set_local_date() {
 }
 
 function filter_events() {
-  let days = document.getElementById("days").value;
-
-  console.log(`filter_events {days}`);
-  
   const now = new Date();
+
+  let days = document.getElementById("days").value;
+  let start_hour_in_utc = parseInt(document.getElementById("start").value);
+  let end_hour_in_utc = parseInt(document.getElementById("end").value);
+  //console.log(`start ${start_hour_in_utc}`);
+  //console.log(`end ${end_hour_in_utc}`);
+
+  //console.log(`filter_events ${days}`);
+  
+  document.getElementById("now").innerHTML = now.toLocaleDateString( [], {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            timeZoneName: 'long'
+        });
+
 
   let cards = document.getElementsByClassName("card");
   document.getElementById("total").innerHTML = cards.length;
 
   let count = 0;
   for (let i = 0; i < cards.length; i++) {
+    cards.item(i).style.display = "block";
+
     const datetime = cards.item(i).getElementsByTagName("time")[0].getAttribute("datetime")
-    console.log(datetime);
+    //console.log(datetime);
     const date = new Date(datetime);
+    
+    let event_start_hour_locally = (date.getUTCHours() - (now.getTimezoneOffset() / 60) + 24) % 24;
+    //console.log(`event start locally: ${event_start_hour_locally}`);
+
+    if ( event_start_hour_locally < start_hour_in_utc) {
+        cards.item(i).style.display = "none";
+        continue;
+    }
+
+    if (end_hour_in_utc < event_start_hour_locally) {
+        cards.item(i).style.display = "none";
+        continue;
+    }
+
     let diff = datediff(now, date);
-    console.log(diff);
+    //console.log(diff);
+ 
+    if (diff < 0) {
+        cards.item(i).style.display = "none";
+        continue;
+    }
+    
     if (diff > days) {
         cards.item(i).style.display = "none";
-    } else {
-        cards.item(i).style.display = "block";
-        count++;
-    }    
+        continue;
+    }
+        
+    count++;
   }
 
   document.getElementById("showing").innerHTML = count;
@@ -123,6 +161,8 @@ function setup() {
   set_local_date();
   filter_events();
   document.getElementById("days").addEventListener("change", filter_events);
+  document.getElementById("start").addEventListener("change", filter_events);
+  document.getElementById("end").addEventListener("change", filter_events);
 }
 
 setup();
