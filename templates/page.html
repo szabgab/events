@@ -16,29 +16,34 @@
       <div class="content">
         {{content}}
         Assuming local time where you are is <b><span id="now"></span></b>, the timestamps below should be correct.
-        <a href="https://github.com/szabgab/virtual-events">source</a>. Showing <span id="showing"></span> out of <span id="total"></span> events.
+        <a href="https://github.com/szabgab/virtual-events">source</a>.
+        <div>
+          Showing <span id="showing"></span> out of <span id="total"></span> events.
+        </div>
 
-        <select id="days">
-          <option value="365">All</option>
-          <option value="1">24 hours</option>
-          <option value="7">7 days</option>
-          <option value="30">30 days</option>
-        </select>
-        Event starting between 
-        <select id="start">
-          <option value="0">0</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="16">16</option>
-        </select> - 
-        <select id="end">
-          <option value="16">16</option>
-          <option value="20">20</option>
-          <option value="22">22</option>
-          <option value="24">24</option>
-        </select>
-        hours in your local time.
+        <div>
+          Show
+          <select class="select" id="days">
+            <option value="365">All</option>
+            <option value="1">24 hours</option>
+            <option value="7">7 days</option>
+            <option value="30">30 days</option>
+          </select> ahead event that are starting between 
+          <select class="select" id="start">
+            <option value="0">0</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="16">16</option>
+          </select> - 
+          <select class="select" id="end">
+            <option value="16">16</option>
+            <option value="20">20</option>
+            <option value="22">22</option>
+            <option value="24">24</option>
+          </select>
+          hours in your local time.  
+        </div>
 
       </div>
 
