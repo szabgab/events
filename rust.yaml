@@ -54,5 +54,57 @@
   language: English
   start: 2024-06-19T18:00:00-07:00
 
+- title: Rust Hack and Learn
+  url: https://www.meetup.com/rust-berlin/events/298477705/
+  name: Rust Berlin
+  address: https://www.meetup.com/rust-berlin/
+  language: English
+  start: 2024-06-20T19:00:00+02:00
+
+- title: Last Tuesday
+  url: https://www.meetup.com/dallasrust/events/mvdtgtygcjbhc/
+  name: Dallas Rust
+  address: https://www.meetup.com/dallasrust/
+  language: English
+  start: 2024-06-25T19:00:00-05:00
+  # timezone: CDT (Central Daylight)
+
+- title: Crafting Interpreters in Rust Collaboratively
+  url: https://www.meetup.com/charlottesville-rust-meetup/events/298897826/
+  name: Charlottesville Rust Meetup
+  address: https://www.meetup.com/charlottesville-rust-meetup/
+  language: English
+  start: 2024-06-27T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+- title: Buffalo Rust User Group
+  url: https://www.meetup.com/buffalo-rust-meetup/events/300191673/
+  name: Buffalo Rust User Group
+  address: https://www.meetup.com/buffalo-rust-meetup/
+  language: English
+  start: 2024-07-02T19:30:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+- title: Build Web Apps with Rust and Leptos
+  url: https://www.eventbrite.com/e/build-web-apps-with-rust-and-leptos-tickets-904804503627
+  name: Training 4 Programmers LLC
+  address: https://www.eventbrite.com/o/training-4-programmers-llc-80387368983
+  language: English
+  start: 2024-07-03T19:00:00-00:00
+
+
+- title: Rust Hack and Learn
+  url: https://www.meetup.com/rust-berlin/events/298488820/
+  name: Rust Berlin
+  address: https://www.meetup.com/rust-berlin/
+  language: English
+  start: 2024-07-04T19:00:00+02:00
+
+- title: Rust Hack and Learn
+  url: https://www.meetup.com/rust-berlin/events/298488824/
+  name: Rust Berlin
+  address: https://www.meetup.com/rust-berlin/
+  language: English
+  start: 2024-07-18T19:00:00+02:00
 
 
