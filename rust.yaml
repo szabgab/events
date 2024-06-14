@@ -109,6 +109,13 @@
   language: English
   start: 2024-07-04T19:00:00+02:00
 
+- title: Reading JSON files in Rust
+  url: https://www.meetup.com/code-mavens/events/301636580/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  start: 2024-07-11T18:00:00+03:00
+
 - title: Rust Hack and Learn
   url: https://www.meetup.com/rust-berlin/events/298488824/
   name: Rust Berlin
