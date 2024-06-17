@@ -77,6 +77,10 @@
   start: 2024-06-27T19:00:00-04:00
   # timezone: EDT (Eastern Daylight)
 
+#######################################
+
+
+
 - title: Buffalo Rust User Group
   url: https://www.meetup.com/buffalo-rust-meetup/events/300191673/
   name: Buffalo Rust User Group
@@ -109,12 +113,34 @@
   language: English
   start: 2024-07-04T19:00:00+02:00
 
+- title: Rust Circle Meetup
+  url: https://www.eventbrite.com/e/rust-circle-meetup-tickets-628763176587
+  name: Rust Circle Kampala
+  address: https://www.eventbrite.com/e/rust-circle-meetup-tickets-628763176587
+  language: English
+  start: 2024-07-06T12:00:00+03:00
+
+- title: Second Tuesday
+  url: https://www.meetup.com/dallasrust/events/299346976/
+  name: Dallas Rust
+  address: https://www.meetup.com/dallasrust/
+  language: English
+  start: 2024-07-09T19:00:00-05:00
+
 - title: Reading JSON files in Rust
   url: https://www.meetup.com/code-mavens/events/301636580/
   name: Code Mavens
   address: https://www.meetup.com/code-mavens/
   language: English
   start: 2024-07-11T18:00:00+03:00
+
+- title: Research Computing With The Rust Programming Language
+  url: https://www.eventbrite.com/e/research-computing-with-the-rust-programming-language-tickets-908002037537?aff=ebdssbdestsearch&keep_tld=1
+  name: Centre for eResearch
+  address: https://www.eventbrite.co.nz/o/centre-for-eresearch-75893560993
+  language: English
+  start: 2024-07-11T10:00:00+12:00
+
 
 - title: Rust Hack and Learn
   url: https://www.meetup.com/rust-berlin/events/298488824/
