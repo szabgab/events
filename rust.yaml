@@ -61,6 +61,14 @@
   language: English
   start: 2024-06-20T19:00:00+02:00
 
+- title: Using the Liquid template system in Rust
+  url: https://www.meetup.com/code-mavens/events/301487547/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  start: 2024-06-25T18:00:00+03:00
+
+
 - title: Last Tuesday
   url: https://www.meetup.com/dallasrust/events/mvdtgtygcjbhc/
   name: Dallas Rust
@@ -68,6 +76,13 @@
   language: English
   start: 2024-06-25T19:00:00-05:00
   # timezone: CDT (Central Daylight)
+
+- title: Accepting parameters on the command line using Rust Clap
+  url: https://www.meetup.com/code-mavens/events/301506015/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  start: 2024-06-27T18:00:00+03:00
 
 - title: Crafting Interpreters in Rust Collaboratively
   url: https://www.meetup.com/charlottesville-rust-meetup/events/298897826/
@@ -169,6 +184,13 @@
   address: https://www.eventbrite.co.nz/o/centre-for-eresearch-75893560993
   language: English
   start: 2024-07-11T10:00:00+12:00
+
+- title: Web development in Rust using Rocket - part 2
+  url: https://www.meetup.com/code-mavens/events/301736709/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  start: 2024-07-16T18:00:00+03:00
 
 - title: Rust Study/Hack/Hang-out
   url: https://www.meetup.com/vancouver-rust/events/298631734/
