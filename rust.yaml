@@ -80,6 +80,12 @@
 #######################################
 
 
+- title: Rust LA Reboot
+  url: https://www.meetup.com/rust-los-angeles/events/301645611/
+  name: Rust Los Angeles
+  address: https://www.meetup.com/rust-los-angeles/
+  language: English
+  start: 2024-07-02T18:00:00-07:00
 
 - title: Buffalo Rust User Group
   url: https://www.meetup.com/buffalo-rust-meetup/events/300191673/
@@ -104,8 +110,6 @@
   start: 2024-07-03T19:00:00-04:00
   # timezone: EDT (Eastern Daylight)
 
-
-
 - title: Rust Hack and Learn
   url: https://www.meetup.com/rust-berlin/events/298488820/
   name: Rust Berlin
@@ -127,6 +131,31 @@
   language: English
   start: 2024-07-09T19:00:00-05:00
 
+- title: Rust Nürnberg online
+  url: https://www.meetup.com/rust-noris/events/298076822/
+  name: Rust Nuremberg
+  address: https://www.meetup.com/rust-noris/
+  language: English
+  start: 2024-07-11T19:00:00+02:00
+  # CEST
+
+
+- title: Crafting Interpreters in Rust Collaboratively
+  url: https://www.meetup.com/charlottesville-rust-meetup/events/298897842/
+  name: Charlottesville Rust Meetup
+  address: https://www.meetup.com/charlottesville-rust-meetup/
+  language: English
+  start: 2024-07-11T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+- title: Programación de sistemas con Rust
+  url: https://www.meetup.com/rust-mx/events/301740677/
+  name: Rust MX
+  address: https://www.meetup.com/rust-mx/
+  language: Spanish
+  start: 2024-07-11T19:00:00-05:00
+  # timezone: EDT (Eastern Daylight)
+
 - title: Reading JSON files in Rust
   url: https://www.meetup.com/code-mavens/events/301636580/
   name: Code Mavens
@@ -141,6 +170,12 @@
   language: English
   start: 2024-07-11T10:00:00+12:00
 
+- title: Rust Study/Hack/Hang-out
+  url: https://www.meetup.com/vancouver-rust/events/298631734/
+  name: Vancouver Rust
+  address: https://www.meetup.com/vancouver-rust/
+  language: English
+  start: 2024-07-17T18:00:00-07:00
 
 - title: Rust Hack and Learn
   url: https://www.meetup.com/rust-berlin/events/298488824/
@@ -149,6 +184,18 @@
   language: English
   start: 2024-07-18T19:00:00+02:00
 
+- title: Crafting Interpreters in Rust Collaboratively
+  url: https://www.meetup.com/charlottesville-rust-meetup/events/298897865/
+  name: Charlottesville Rust Meetup
+  address: https://www.meetup.com/charlottesville-rust-meetup/
+  language: English
+  start: 2024-07-25T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+
+
+#####################################
+#
 - title: Indy.rs - with Social Distancing
   url: https://www.meetup.com/indyrs/events/300328027/
   name: Indy Rust
@@ -156,6 +203,42 @@
   language: English
   start: 2024-08-07T19:00:00-04:00
   # timezone: EDT (Eastern Daylight)
+
+- title: Crafting Interpreters in Rust Collaboratively
+  url: https://www.meetup.com/charlottesville-rust-meetup/events/298897918/
+  name: Charlottesville Rust Meetup
+  address: https://www.meetup.com/charlottesville-rust-meetup/
+  language: English
+  start: 2024-08-08T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+- title: Rust Study/Hack/Hang-out
+  url: https://www.meetup.com/vancouver-rust/events/298631735/
+  name: Vancouver Rust
+  address: https://www.meetup.com/vancouver-rust/
+  language: English
+  start: 2024-08-21T18:00:00-07:00
+
+
+- title: Crafting Interpreters in Rust Collaboratively
+  url: https://www.meetup.com/charlottesville-rust-meetup/events/298897938/
+  name: Charlottesville Rust Meetup
+  address: https://www.meetup.com/charlottesville-rust-meetup/
+  language: English
+  start: 2024-08-22T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+
+#####################################
+
+- title: Crafting Interpreters in Rust Collaboratively
+  url: https://www.meetup.com/charlottesville-rust-meetup/events/298897957/
+  name: Charlottesville Rust Meetup
+  address: https://www.meetup.com/charlottesville-rust-meetup/
+  language: English
+  start: 2024-09-05T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
 
 - title: Indy.rs - with Social Distancing
   url: https://www.meetup.com/indyrs/events/300328029/
@@ -165,4 +248,51 @@
   start: 2024-09-07T19:00:00-04:00
   # timezone: EDT (Eastern Daylight)
 
+- title: Rust Study/Hack/Hang-out
+  url: https://www.meetup.com/vancouver-rust/events/298631736/
+  name: Vancouver Rust
+  address: https://www.meetup.com/vancouver-rust/
+  language: English
+  start: 2024-09-18T18:00:00-07:00
+
+
+- title: Crafting Interpreters in Rust Collaboratively
+  url: https://www.meetup.com/charlottesville-rust-meetup/events/298897973/
+  name: Charlottesville Rust Meetup
+  address: https://www.meetup.com/charlottesville-rust-meetup/
+  language: English
+  start: 2024-09-19T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+#####################################
+
+- title: Rust Study/Hack/Hang-out
+  url: https://www.meetup.com/vancouver-rust/events/298631737/
+  name: Vancouver Rust
+  address: https://www.meetup.com/vancouver-rust/
+  language: English
+  start: 2024-10-16T18:00:00-07:00
+  # PDT
+
+
+#####################################
+
+- title: Rust Study/Hack/Hang-out
+  url: https://www.meetup.com/vancouver-rust/events/fjdcltygcpbbc/
+  name: Vancouver Rust
+  address: https://www.meetup.com/vancouver-rust/
+  language: English
+  start: 2024-11-20T18:00:00-08:00
+  # PST
+
+
+#####################################
+
+- title: Rust Study/Hack/Hang-out
+  url: https://www.meetup.com/vancouver-rust/events/fjdcltygcqbxb/
+  name: Vancouver Rust
+  address: https://www.meetup.com/vancouver-rust/
+  language: English
+  start: 2024-12-19T18:00:00-08:00
+  # PST
 
