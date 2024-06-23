@@ -58,7 +58,7 @@
               <p class="subtitle is-6"><a href="{{event.address}}">{{event.name}}</a></p>
             </div>
           </div>
-      
+
           <div class="content">
             {{event.language}}
             <br />
@@ -81,7 +81,7 @@ function set_local_date() {
         //const mydate = dates[ix].getAttribute("x-schedule");
         const mydate = dates[ix].getAttribute("datetime");
         const date = new Date(mydate);
-  
+
         dates[ix].innerHTML = date.toLocaleDateString( [], {
             weekday: 'long',
             year: 'numeric',
@@ -112,7 +112,7 @@ function filter_events() {
   //console.log(`end ${end_hour_in_utc}`);
 
   //console.log(`filter_events ${days}`);
-  
+
   document.getElementById("now").innerHTML = now.toLocaleDateString( [], {
             weekday: 'long',
             year: 'numeric',
@@ -134,7 +134,7 @@ function filter_events() {
     const datetime = cards.item(i).getElementsByTagName("time")[0].getAttribute("datetime")
     //console.log(datetime);
     const date = new Date(datetime);
-    
+
     let event_start_hour_locally = (date.getUTCHours() - (now.getTimezoneOffset() / 60) + 24) % 24;
     //console.log(`event start locally: ${event_start_hour_locally}`);
 
@@ -150,24 +150,24 @@ function filter_events() {
 
     let diff = datediff(now, date);
     //console.log(diff);
- 
+
     if (diff < 0) {
         cards.item(i).style.display = "none";
         continue;
     }
-    
+
     if (diff > days) {
         cards.item(i).style.display = "none";
         continue;
     }
-        
+
     count++;
   }
 
   document.getElementById("showing").innerHTML = count;
 }
 
-function datediff(first, second) {        
+function datediff(first, second) {
     return Math.round((second - first) / (1000 * 60 * 60 * 24));
 }
 
