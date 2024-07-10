@@ -68,15 +68,6 @@
   language: English
   start: 2024-06-25T18:00:00+03:00
 
-
-- title: Last Tuesday
-  url: https://www.meetup.com/dallasrust/events/mvdtgtygcjbhc/
-  name: Dallas Rust
-  address: https://www.meetup.com/dallasrust/
-  language: English
-  start: 2024-06-25T19:00:00-05:00
-  # timezone: CDT (Central Daylight)
-
 - title: Accepting parameters on the command line using Rust Clap
   url: https://www.meetup.com/code-mavens/events/301506015/
   name: Code Mavens
@@ -91,6 +82,15 @@
   language: English
   start: 2024-06-27T19:00:00-04:00
   # timezone: EDT (Eastern Daylight)
+
+- title: Last Tuesday
+  url: https://www.meetup.com/dallasrust/events/301585665/
+  name: Dallas Rust
+  address: https://www.meetup.com/dallasrust/
+  language: English
+  start: 2024-06-30T19:00:00-05:00
+  # timezone: CDT (Central Daylight)
+
 
 #######################################
 
@@ -185,13 +185,6 @@
   language: English
   start: 2024-07-11T10:00:00+12:00
 
-- title: Web development in Rust using Rocket - part 2
-  url: https://www.meetup.com/code-mavens/events/301736709/
-  name: Code Mavens
-  address: https://www.meetup.com/code-mavens/
-  language: English
-  start: 2024-07-16T18:00:00+03:00
-
 - title: Rust Study/Hack/Hang-out
   url: https://www.meetup.com/vancouver-rust/events/298631734/
   name: Vancouver Rust
@@ -206,6 +199,23 @@
   language: English
   start: 2024-07-18T19:00:00+02:00
 
+- title: Rust Munich 2024 / 2 - hybrid
+  url: https://www.meetup.com/rust-munich/events/298507657/
+  name: Rust Munich
+  address: https://www.meetup.com/rust-munich/
+  language: English
+  start: 2024-07-23T18:30:00+02:00
+  # timezone: CEST UTC+2
+
+- title: "Lunch & Learn: Exploring Rust API Use Cases"
+  url: https://www.meetup.com/women-in-rust/events/301730780/
+  name: Women in rust
+  address: https://www.meetup.com/women-in-rust/
+  language: English
+  start: 2024-07-24T12:00:00+01:00
+  # timezone: UK
+
+
 - title: Crafting Interpreters in Rust Collaboratively
   url: https://www.meetup.com/charlottesville-rust-meetup/events/298897865/
   name: Charlottesville Rust Meetup
@@ -215,9 +225,33 @@
   # timezone: EDT (Eastern Daylight)
 
 
+- title: UARust Conference 2024
+  url: https://uarust.com/
+  name: Ukrainian Rust Community
+  address: https://uarust.com/
+  language: English
+  start: 2024-07-27T10:00:00+03:00
+  # timezone: UTC+3
+
+- title: "Command Line Tools: Implementing wc in Rust"
+  url: https://www.meetup.com/code-mavens/events/302151487/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  start: 2024-07-31T10:00:00+03:00
+
 
 #####################################
-#
+
+
+- title: Web development in Rust using Rocket - part 2
+  url: https://www.meetup.com/code-mavens/events/301736709/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  start: 2024-08-06T18:00:00+03:00
+
+
 - title: Indy.rs - with Social Distancing
   url: https://www.meetup.com/indyrs/events/300328027/
   name: Indy Rust
