@@ -1,29 +1,23 @@
-#####################################
-
-
-- title: Web development in Rust using Rocket - part 2
-  url: https://www.meetup.com/code-mavens/events/301736709/
-  name: Code Mavens
-  address: https://www.meetup.com/code-mavens/
+- title: "Second Tuesday: Typestate Pattern in Rust"
+  url: https://www.meetup.com/dallasrust/events/299346978/
+  name: Dallas Rust
+  address: https://www.meetup.com/dallasrust/
   language: English
-  start: 2024-08-06T18:00:00+03:00
+  start: 2024-08-13T19:00:00-05:00
 
-
-- title: Indy.rs - with Social Distancing
-  url: https://www.meetup.com/indyrs/events/300328027/
-  name: Indy Rust
-  address: https://www.meetup.com/indyrs/
+- title: Rust Hack and Learn
+  url: https://www.meetup.com/rust-berlin/events/298633266/
+  name: Rust Berlin
+  address: https://www.meetup.com/rust-berlin/
   language: English
-  start: 2024-08-07T19:00:00-04:00
-  # timezone: EDT (Eastern Daylight)
+  start: 2024-08-15T19:00:00+02:00
 
-- title: Crafting Interpreters in Rust Collaboratively
-  url: https://www.meetup.com/charlottesville-rust-meetup/events/298897918/
-  name: Charlottesville Rust Meetup
-  address: https://www.meetup.com/charlottesville-rust-meetup/
+- title: Mid-month Rustful
+  url: https://www.meetup.com/rustdc/events/299346968/
+  name: Rust DC
+  address: https://www.meetup.com/rustdc/
   language: English
-  start: 2024-08-08T19:00:00-04:00
-  # timezone: EDT (Eastern Daylight)
+  start: 2024-08-20T19:00:00-04:00
 
 - title: Rust Study/Hack/Hang-out
   url: https://www.meetup.com/vancouver-rust/events/298631735/
@@ -31,6 +25,21 @@
   address: https://www.meetup.com/vancouver-rust/
   language: English
   start: 2024-08-21T18:00:00-07:00
+
+- title: Stammtisch (gemeinsam mit der C++ UG KA)
+  url: https://www.meetup.com/the-karlsruhe-functional-programmers-meetup-group/events/293937801
+  name: The Karlsruhe Functional Programmers Meetup Group
+  address: https://www.meetup.com/the-karlsruhe-functional-programmers-meetup-group/
+  language: English
+  start: 2024-08-22T19:00:00+01:00
+
+
+- title: Conf42 Rustlang 2024
+  url: https://www.meetup.com/conf42/events/297266825/
+  name: "Conf42: Online Tech Events"
+  address: https://www.meetup.com/conf42/
+  language: English
+  start: 2024-08-22T18:00:00+00:00
 
 
 - title: Crafting Interpreters in Rust Collaboratively
@@ -40,6 +49,34 @@
   language: English
   start: 2024-08-22T19:00:00-04:00
   # timezone: EDT (Eastern Daylight)
+
+- title: Fearless Concurrency with Rust
+  url: https://www.eventbrite.com/e/fearless-concurrency-with-rust-tickets-934569591807
+  name: Ardan Labs
+  address: https://www.eventbrite.com/o/ardan-labs-7092394651
+  language: English
+  start: 2024-08-27T11:00:00-04:00
+
+- title: Live coding - A distance #1
+  url: https://www.meetup.com/bordeaux-rust/events/302570681/
+  name: Rust Bordeaux
+  address: https://www.meetup.com/bordeaux-rust/
+  language: French
+  start: 2024-08-27T19:00:00+02:00
+
+- title: Declarative macros in Rust
+  url: https://www.meetup.com/rust-in-israel/events/302327956/
+  name: Rust In Israel
+  address: https://www.meetup.com/rust-in-israel/
+  language: Hebrew
+  start: 2024-08-27T17:00:00+03:00
+
+- title: Last Tuesday
+  url: https://www.meetup.com/dallasrust/events/301585668/
+  name: Dallas Rust
+  address: https://www.meetup.com/dallasrust/
+  language: English
+  start: 2024-08-27T19:00:00-05:00
 
 
 - title: "Command Line Tools: Implementing wc in Rust"

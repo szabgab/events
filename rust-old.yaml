@@ -233,3 +233,28 @@
   start: 2024-07-27T10:00:00+03:00
   # timezone: UTC+3
 
+- title: Web development in Rust using Rocket - part 2
+  url: https://www.meetup.com/code-mavens/events/301736709/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  start: 2024-08-06T18:00:00+03:00
+
+
+- title: Indy.rs - with Social Distancing
+  url: https://www.meetup.com/indyrs/events/300328027/
+  name: Indy Rust
+  address: https://www.meetup.com/indyrs/
+  language: English
+  start: 2024-08-07T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+- title: Crafting Interpreters in Rust Collaboratively
+  url: https://www.meetup.com/charlottesville-rust-meetup/events/298897918/
+  name: Charlottesville Rust Meetup
+  address: https://www.meetup.com/charlottesville-rust-meetup/
+  language: English
+  start: 2024-08-08T19:00:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
+
