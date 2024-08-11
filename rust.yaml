@@ -31,7 +31,7 @@
   name: The Karlsruhe Functional Programmers Meetup Group
   address: https://www.meetup.com/the-karlsruhe-functional-programmers-meetup-group/
   language: English
-  start: 2024-08-22T19:00:00+01:00
+  start: 2024-08-22T19:00:00+02:00
 
 
 - title: Conf42 Rustlang 2024
@@ -39,7 +39,7 @@
   name: "Conf42: Online Tech Events"
   address: https://www.meetup.com/conf42/
   language: English
-  start: 2024-08-22T18:00:00+00:00
+  start: 2024-08-22T17:00:00+00:00
 
 
 - title: Crafting Interpreters in Rust Collaboratively
@@ -57,7 +57,7 @@
   language: English
   start: 2024-08-27T11:00:00-04:00
 
-- title: Live coding - A distance #1
+- title: "Live coding - A distance #1"
   url: https://www.meetup.com/bordeaux-rust/events/302570681/
   name: Rust Bordeaux
   address: https://www.meetup.com/bordeaux-rust/
@@ -86,9 +86,24 @@
   language: English
   start: 2024-08-28T10:00:00+03:00
 
+- title: Rust Hack and Learn
+  url: https://www.meetup.com/rust-berlin/events/298633267/
+  name: Rust Berlin
+  address: https://www.meetup.com/rust-berlin/
+  language: English
+  start: 2024-08-29T19:00:00+02:00
 
 
 #####################################
+
+- title: Buffalo Rust User Group
+  url: https://www.meetup.com/buffalo-rust-meetup/events/302007365/
+  name: Buffalo Rust User Group
+  address: https://www.meetup.com/buffalo-rust-meetup/
+  language: English
+  start: 2024-09-03T19:30:00-04:00
+  # timezone: EDT (Eastern Daylight)
+
 
 - title: Crafting Interpreters in Rust Collaboratively
   url: https://www.meetup.com/charlottesville-rust-meetup/events/298897957/
