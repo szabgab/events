@@ -1,17 +1,3 @@
-- title: "Second Tuesday: Typestate Pattern in Rust"
-  url: https://www.meetup.com/dallasrust/events/299346978/
-  name: Dallas Rust
-  address: https://www.meetup.com/dallasrust/
-  language: English
-  start: 2024-08-13T19:00:00-05:00
-
-- title: Rust Hack and Learn
-  url: https://www.meetup.com/rust-berlin/events/298633266/
-  name: Rust Berlin
-  address: https://www.meetup.com/rust-berlin/
-  language: English
-  start: 2024-08-15T19:00:00+02:00
-
 - title: Mid-month Rustful
   url: https://www.meetup.com/rustdc/events/299346968/
   name: Rust DC
@@ -121,6 +107,27 @@
   language: English
   start: 2024-09-04T19:00:00-04:00
   # timezone: EDT (Eastern Daylight)
+
+- title: Rust Nürnberg online
+  url: https://www.meetup.com/rust-noris/events/300820268/
+  name: Rust Nuremberg
+  address: https://www.meetup.com/rust-noris/
+  language: English
+  start: 2024-09-04T19:00:00+02:00
+
+- title: "Second Tuesday"
+  url: https://www.meetup.com/dallasrust/events/299346981/
+  name: Dallas Rust
+  address: https://www.meetup.com/dallasrust/
+  language: English
+  start: 2024-09-10T19:00:00-05:00
+
+- title: RustConf 2024
+  url: https://foundation.rust-lang.org/events/rustconf-2024/
+  name: Rust Foundation
+  address: https://foundation.rust-lang.org/
+  language: English
+  start: 2024-09-10T09:00:00-04:00
 
 - title: Rust Study/Hack/Hang-out
   url: https://www.meetup.com/vancouver-rust/events/298631736/
