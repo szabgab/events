@@ -10,13 +10,11 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        {{title}}
-      </h1>
+      <h1 class="title">{{title}}</h1>
       <div class="content">
         {{content}}
         Assuming local time where you are is <b><span id="now"></span></b>, the timestamps below should be correct.
-        <a href="https://github.com/szabgab/events">source</a>.
+        <a href="https://github.com/szabgab/events">source</a>. Data last updated: {{now}}.
         <div>
           Showing <span id="showing"></span> out of <span id="total"></span> events.
         </div>
@@ -71,6 +69,7 @@
         </div>
       </div>
       {% endfor %}
+    </div>
   </section>
   </body>
 </html>

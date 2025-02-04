@@ -48,6 +48,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         "content": &html,
         "events": events,
         "title": "Virtual Rust Events",
+        "now": now.to_string(),
     });
     let output = template.render(&globals).unwrap();
 
