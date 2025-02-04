@@ -1,0 +1,15 @@
+{% for event in events %}
+
+{{event.address}}
+{{event.name}}
+
+{{event.title}}
+{{event.url}}
+
+
+#{{event.language}}
+{{event.start}}
+
+    -----------------------------
+{% endfor %}
+

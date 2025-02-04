@@ -36,6 +36,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         })
         .collect::<Vec<&Event>>();
 
+    generate_text(&events)?;
+
     let html = "";
     let template = include_str!("../templates/page.html");
     let template = liquid::ParserBuilder::with_stdlib()
@@ -53,5 +55,23 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let output = template.render(&globals).unwrap();
 
     std::fs::write("_site/index.html", output)?;
+
+    Ok(())
+}
+
+fn generate_text(events: &[&Event]) -> Result<(), Box<dyn std::error::Error>> {
+    let template = include_str!("../templates/text.txt");
+    let template = liquid::ParserBuilder::with_stdlib()
+        .build()
+        .unwrap()
+        .parse(template)
+        .unwrap();
+
+    let globals = liquid::object!({
+        "events": events,
+    });
+    let output = template.render(&globals).unwrap();
+
+    std::fs::write("_site/rust.txt", output)?;
     Ok(())
 }
