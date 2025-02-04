@@ -100,6 +100,7 @@ function set_local_date() {
 
 function filter_events() {
   const now = new Date();
+  console.log(`now: ${now}`);
 
   let days = document.getElementById("days").value;
   let start_hour_in_utc = parseInt(document.getElementById("start").value);
