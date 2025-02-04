@@ -33,6 +33,9 @@ jobs:
     - name: Update Rust
       run: rustup update
 
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+
     - name: Rust version
       run: rustc -vV
 
@@ -51,9 +54,7 @@ jobs:
     - name: Build website
       run: |
         cargo run
-
-    - name: Setup Pages
-      uses: actions/configure-pages@v5
+        ls -l _site/
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
@@ -69,3 +70,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
