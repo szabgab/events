@@ -16,4 +16,20 @@
   # CET - Central European Timezone
   # CEST
 
+- title: Rust Coding / Game Dev Fridays Open Mob Session!
+  url: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/events/gvxrntyhcdbkb/
+  name: Jersey City Classy and Curious Coders Club Cooperative
+  address: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/
+  language: English
+  start: 2025-02-07T15:00:00-05:00
+  # EST
+
+- title: "Meet Elusion: New DataFrame Library powered by Rust 🦀 with Borivoj Grujicic"
+  url: https://www.meetup.com/code-mavens/events/305513416/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  start: 2025-02-11T20:30:00+02:00
+  # ILT
+
 
