@@ -20,28 +20,13 @@ struct Event {
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     std::fs::create_dir_all("_site").unwrap();
     let options = dir::CopyOptions::new().overwrite(true);
-    let mut from_paths = Vec::new();
-    from_paths.push("static/js");
+    let from_paths = vec!["static/js"];
     copy_items(&from_paths, "_site", &options)?;
-
-    let filename = "rust.yaml";
-    let text = fs::read_to_string(filename).unwrap();
 
     let now: DateTime<FixedOffset> = Utc::now().fixed_offset();
     //println!("now:  {now}");
 
-    let events: Vec<Event> = serde_yaml::from_str(&text).unwrap_or_else(|err| {
-        eprintln!("Could not parse YAML file: {err}");
-        std::process::exit(1);
-    });
-
-    let events = events
-        .iter()
-        .filter(|event| {
-            let dt = DateTime::parse_from_str(&event.start, "%Y-%m-%dT%H:%M:%S%z").unwrap();
-            dt.cmp(&now) != Ordering::Less
-        })
-        .collect::<Vec<&Event>>();
+    let events = read_events("rust.yaml", now);
 
     generate_text(&events)?;
     generate_html(&events, now)?;
@@ -49,8 +34,25 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
+fn read_events(filename: &str, now: DateTime<FixedOffset>) -> Vec<Event> {
+    let text = fs::read_to_string(filename).unwrap();
+
+    let events: Vec<Event> = serde_yaml::from_str(&text).unwrap_or_else(|err| {
+        eprintln!("Could not parse YAML file: {err}");
+        std::process::exit(1);
+    });
+
+    events
+        .into_iter()
+        .filter(|event| {
+            let dt = DateTime::parse_from_str(&event.start, "%Y-%m-%dT%H:%M:%S%z").unwrap();
+            dt.cmp(&now) != Ordering::Less
+        })
+        .collect::<Vec<Event>>()
+}
+
 fn generate_html(
-    events: &[&Event],
+    events: &[Event],
     now: DateTime<FixedOffset>,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let html = "";
@@ -73,7 +75,7 @@ fn generate_html(
     Ok(())
 }
 
-fn generate_text(events: &[&Event]) -> Result<(), Box<dyn std::error::Error>> {
+fn generate_text(events: &[Event]) -> Result<(), Box<dyn std::error::Error>> {
     let template = include_str!("../templates/text.txt");
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
