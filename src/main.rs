@@ -3,6 +3,9 @@ use serde::{Deserialize, Serialize};
 use std::cmp::Ordering;
 use std::fs;
 
+use fs_extra::copy_items;
+use fs_extra::dir;
+
 #[derive(Deserialize, Serialize, Debug)]
 #[serde(deny_unknown_fields)]
 struct Event {
@@ -16,6 +19,10 @@ struct Event {
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     std::fs::create_dir_all("_site").unwrap();
+    let options = dir::CopyOptions::new().overwrite(true);
+    let mut from_paths = Vec::new();
+    from_paths.push("static/js");
+    copy_items(&from_paths, "_site", &options)?;
 
     let filename = "rust.yaml";
     let text = fs::read_to_string(filename).unwrap();
