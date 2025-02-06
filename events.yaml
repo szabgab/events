@@ -119,3 +119,30 @@
   start: 2025-02-25T19:00:00-05:00
   # EST
 
+- title: Rust Hack and Learn
+  url: https://www.meetup.com/rust-berlin/events/300820295/
+  name: Rust Berlin
+  address: https://www.meetup.com/rust-berlin/
+  language: English
+  category: Rust
+  start: 2025-02-27T19:00:00+01:00
+  # CET
+
+- title: Parsing command line options with category theory and async
+  url: https://www.meetup.com/charlottesville-rust-meetup/events/305948365/
+  name: Charlottesville Rust Meetup
+  address: https://www.meetup.com/charlottesville-rust-meetup/
+  language: English
+  start: 2025-02-13T19:00:00-05:00
+
+- title: Indy.rs - with Social Distancing
+  url: https://www.meetup.com/indyrs/events/302031659/
+  name: Indy Rust
+  address: https://www.meetup.com/indyrs/
+  language: English
+  category: Rust
+  start: 2025-03-07T19:00:00-05:00
+  # EST Eastern timezone (USA East coast)
+  # EDT Eastern Daylight
+
+
