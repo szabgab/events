@@ -6,14 +6,14 @@ use std::fs;
 use fs_extra::copy_items;
 use fs_extra::dir;
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, PartialEq, Clone)]
 enum Category {
     Perl,
     Python,
     Rust,
 }
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 #[serde(deny_unknown_fields)]
 struct Event {
     title: String,
@@ -22,7 +22,7 @@ struct Event {
     address: String,
     language: String, // English
     start: String,    // 2024-06-06T18:00:00+03:00
-    cat: Category,
+    category: Category,
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -37,7 +37,22 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let events = read_events("events.yaml", now);
 
     generate_text(&events)?;
-    generate_html(&events, now)?;
+    generate_html(&events, now, "all.html")?;
+
+    let python_events = events
+        .iter()
+        .filter(|event| event.category == Category::Python)
+        .cloned()
+        .collect::<Vec<Event>>();
+    generate_html(&python_events, now, "python.html")?;
+
+    let rust_events = events
+        .into_iter()
+        .filter(|event| event.category == Category::Rust)
+        .collect::<Vec<Event>>();
+    generate_html(&rust_events, now, "rust.html")?;
+
+    generate_main_page(now)?;
 
     Ok(())
 }
@@ -59,9 +74,28 @@ fn read_events(filename: &str, now: DateTime<FixedOffset>) -> Vec<Event> {
         .collect::<Vec<Event>>()
 }
 
+fn generate_main_page(now: DateTime<FixedOffset>) -> Result<(), Box<dyn std::error::Error>> {
+    let template = include_str!("../templates/index.html");
+    let template = liquid::ParserBuilder::with_stdlib()
+        .build()
+        .unwrap()
+        .parse(template)
+        .unwrap();
+
+    let globals = liquid::object!({
+        "title": "Virtual Events",
+        "now": now.to_string(),
+    });
+    let output = template.render(&globals).unwrap();
+
+    std::fs::write(format!("_site/index.html"), output)?;
+    Ok(())
+}
+
 fn generate_html(
     events: &[Event],
     now: DateTime<FixedOffset>,
+    filename: &str,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let html = "";
     let template = include_str!("../templates/page.html");
@@ -79,7 +113,7 @@ fn generate_html(
     });
     let output = template.render(&globals).unwrap();
 
-    std::fs::write("_site/index.html", output)?;
+    std::fs::write(format!("_site/{filename}"), output)?;
     Ok(())
 }
 
