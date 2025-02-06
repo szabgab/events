@@ -3,6 +3,7 @@
   name: Indy Rust
   address: https://www.meetup.com/indyrs/
   language: English
+  cat: Rust
   start: 2025-02-05T19:00:00-05:00
   # EST Eastern timezone (USA East coast)
   # EDT Eastern Daylight
@@ -12,6 +13,7 @@
   name: Rust Nuremberg
   address: https://www.meetup.com/rust-noris/
   language: English
+  cat: Rust
   start: 2025-02-06T19:00:00+01:00
   # CET - Central European Timezone
   # CEST
@@ -21,6 +23,7 @@
   name: Jersey City Classy and Curious Coders Club Cooperative
   address: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/
   language: English
+  cat: Rust
   start: 2025-02-07T15:00:00-05:00
   # EST
 
@@ -29,6 +32,7 @@
   name: San Diego Python Users Group
   address: https://www.meetup.com/pythonsd/
   language: English
+  cat: Python
   start: 2025-02-08T10:00:00-05:00
   # PST
 
@@ -37,6 +41,7 @@
   name: Code Mavens
   address: https://www.meetup.com/code-mavens/
   language: English
+  cat: Rust
   start: 2025-02-11T20:30:00+02:00
   # ILT
 
@@ -45,6 +50,7 @@
   name: Rust Berlin
   address: https://www.meetup.com/rust-berlin/
   language: English
+  cat: Rust
   start: 2025-02-13T19:00:00+01:00
   # CET
 
@@ -53,6 +59,7 @@
   name: Jersey City Classy and Curious Coders Club Cooperative
   address: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/
   language: English
+  cat: Rust
   start: 2025-02-14T15:00:00-05:00
   # EST
 
@@ -61,6 +68,7 @@
   name: Vancouver Rust
   address: https://www.meetup.com/vancouver-rust/
   language: English
+  cat: Rust
   start: 2025-02-19T18:00:00-07:00
   # PST
 
@@ -70,6 +78,7 @@
   name: Seattle Rust User Group
   address: https://www.meetup.com/join-srug/
   language: English
+  cat: Rust
   start: 2025-02-20T18:00:00-07:00
   # PST
 
@@ -78,6 +87,7 @@
   name: Jersey City Classy and Curious Coders Club Cooperative
   address: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/
   language: English
+  cat: Rust
   start: 2025-02-21T15:00:00-05:00
   # EST
 
@@ -86,6 +96,7 @@
   name: Dallas Rust
   address: https://www.meetup.com/dallasrust/
   language: English
+  cat: Rust
   start: 2025-02-25T20:00:00-06:00
   # CST
 
@@ -95,6 +106,7 @@
   name: Women in Rust
   address: https://www.meetup.com/women-in-rust/
   language: English
+  cat: Rust
   start: 2025-02-25T13:00:00+00:00
   # UTC
 
@@ -103,6 +115,7 @@
   name: Rust DC
   address: https://www.meetup.com/rustdc/
   language: English
+  cat: Rust
   start: 2025-02-25T19:00:00-05:00
   # EST
 

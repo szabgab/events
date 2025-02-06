@@ -7,6 +7,13 @@ use fs_extra::copy_items;
 use fs_extra::dir;
 
 #[derive(Deserialize, Serialize, Debug)]
+enum Category {
+    Perl,
+    Python,
+    Rust,
+}
+
+#[derive(Deserialize, Serialize, Debug)]
 #[serde(deny_unknown_fields)]
 struct Event {
     title: String,
@@ -15,6 +22,7 @@ struct Event {
     address: String,
     language: String, // English
     start: String,    // 2024-06-06T18:00:00+03:00
+    cat: Category,
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
