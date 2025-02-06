@@ -26,7 +26,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let now: DateTime<FixedOffset> = Utc::now().fixed_offset();
     //println!("now:  {now}");
 
-    let events = read_events("rust.yaml", now);
+    let events = read_events("events.yaml", now);
 
     generate_text(&events)?;
     generate_html(&events, now)?;
@@ -66,7 +66,7 @@ fn generate_html(
     let globals = liquid::object!({
         "content": &html,
         "events": events,
-        "title": "Virtual Rust Events",
+        "title": "Virtual Events",
         "now": now.to_string(),
     });
     let output = template.render(&globals).unwrap();
