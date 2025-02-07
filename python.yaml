@@ -7,6 +7,15 @@
   start: 2025-02-08T10:00:00-08:00
   # PST
 
+- title: Pré-entrainement et finetuning des LLMs à partir de zéro (from scratch)
+  url: https://www.meetup.com/paris-python-machine-learning-deep-learning-meetup-group/events/305692321/
+  name: Python, Machine Learning and Deep Learning Meetup Group
+  address: https://www.meetup.com/paris-python-machine-learning-deep-learning-meetup-group/
+  language: French
+  category: Python
+  start: 2025-02-09T16:00:00+01:00
+  # CET
+
 
 - title: "Monday office hour"
   url: https://www.meetup.com/bostonpython/events/305001375/
@@ -25,6 +34,16 @@
   category: Python
   start: 2025-02-12T18:00:00+01:00
   # CET
+
+- title: Getting started with Git - Gabor Szabo
+  url: https://www.meetup.com/pyweb-il/events/305896213/
+  name: PyWeb-IL
+  address: https://www.meetup.com/pyweb-il/
+  language: Hebrew
+  category: Python
+  start: 2025-02-14T09:00:00+02:00
+  # ILT
+
 
 - title: Python Presentation Night @ Virtual (PPN #133)
   url: https://www.meetup.com/pymntos-twin-cities-python-user-group/events/305911598/

@@ -9,6 +9,8 @@ use fs_extra::dir;
 #[derive(Deserialize, Serialize, Debug, PartialEq, Clone)]
 enum Language {
     English,
+    French,
+    Hebrew,
 }
 
 #[derive(Deserialize, Serialize, Debug, PartialEq, Clone)]
