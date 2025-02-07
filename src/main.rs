@@ -7,6 +7,11 @@ use fs_extra::copy_items;
 use fs_extra::dir;
 
 #[derive(Deserialize, Serialize, Debug, PartialEq, Clone)]
+enum Language {
+    English,
+}
+
+#[derive(Deserialize, Serialize, Debug, PartialEq, Clone)]
 enum Category {
     Perl,
     Python,
@@ -20,7 +25,7 @@ struct Event {
     url: String,
     name: String,
     address: String,
-    language: String, // English
+    language: Language,
     start: String,    // 2024-06-06T18:00:00+03:00
     category: Category,
 }
