@@ -1,0 +1,29 @@
+- title: "Online: SD Python Saturday Study Group"
+  url: https://www.meetup.com/pythonsd/events/305219510/
+  name: San Diego Python Users Group
+  address: https://www.meetup.com/pythonsd/
+  language: English
+  category: Python
+  start: 2025-02-08T10:00:00-08:00
+  # PST
+
+
+- title: "Monday office hour"
+  url: https://www.meetup.com/bostonpython/events/305001375/
+  name: The Boston Python User Group
+  address: https://www.meetup.com/bostonpython/events/305001375/
+  language: English
+  category: Python
+  start: 2025-02-10T12:00:00-05:00
+  # EST
+
+- title: Let's contribute to scikit-learn and Fairlearn! Optional preparation event
+  url: https://www.meetup.com/pyladies-berlin/events/305492587/
+  name: PyLadies Berlin
+  address: https://www.meetup.com/pyladies-berlin/
+  language: English
+  category: Python
+  start: 2025-02-12T18:00:00+01:00
+  # CET
+
+

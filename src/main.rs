@@ -34,7 +34,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let now: DateTime<FixedOffset> = Utc::now().fixed_offset();
     //println!("now:  {now}");
 
-    let events = read_events("events.yaml", now);
+    let mut events = read_events("rust.yaml", now);
+    events.extend(read_events("python.yaml", now));
 
     generate_text(&events)?;
     generate_html(&events, now, "all.html")?;

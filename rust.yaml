@@ -27,15 +27,6 @@
   start: 2025-02-07T15:00:00-05:00
   # EST
 
-- title: "Online: SD Python Saturday Study Group"
-  url: https://www.meetup.com/pythonsd/events/305219510/
-  name: San Diego Python Users Group
-  address: https://www.meetup.com/pythonsd/
-  language: English
-  category: Python
-  start: 2025-02-08T10:00:00-05:00
-  # PST
-
 - title: "Meet Elusion: New DataFrame Library powered by Rust 🦀 with Borivoj Grujicic"
   url: https://www.meetup.com/code-mavens/events/305513416/
   name: Code Mavens
@@ -133,6 +124,7 @@
   name: Charlottesville Rust Meetup
   address: https://www.meetup.com/charlottesville-rust-meetup/
   language: English
+  category: Rust
   start: 2025-02-13T19:00:00-05:00
 
 - title: Indy.rs - with Social Distancing
