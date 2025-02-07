@@ -26,4 +26,13 @@
   start: 2025-02-12T18:00:00+01:00
   # CET
 
+- title: Python Presentation Night @ Virtual (PPN #133)
+  url: https://www.meetup.com/pymntos-twin-cities-python-user-group/events/305911598/
+  name: PyMNtos - Twin Cities Python User Group
+  address: https://www.meetup.com/pymntos-twin-cities-python-user-group/
+  language: English
+  category: Python
+  start: 2025-02-14T19:00:00-05:00
+  # EST
+
 
