@@ -13,9 +13,14 @@
       <h1 class="title">{{title}}</h1>
       <div class="content">
         <ul>
-          <li><a href="/all">All</a></li>
           <li><a href="/rust">Rust</a></li>
           <li><a href="/python">Python</a></li>
+        </ul>
+
+        <ul>
+          {% for entry in counts %}
+             <li><a href="/{{ entry[0] | downcase }}">{{ entry[0] }}</a> ({{ entry[1] }})</li>
+          {% endfor %}
         </ul>
       </div>
     </div>

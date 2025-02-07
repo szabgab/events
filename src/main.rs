@@ -1,6 +1,7 @@
 use chrono::{DateTime, FixedOffset, Utc};
 use serde::{Deserialize, Serialize};
 use std::cmp::Ordering;
+use std::collections::HashMap;
 use std::fs;
 
 use fs_extra::copy_items;
@@ -28,7 +29,7 @@ struct Event {
     name: String,
     address: String,
     language: Language,
-    start: String,    // 2024-06-06T18:00:00+03:00
+    start: String, // 2024-06-06T18:00:00+03:00
     category: Category,
 }
 
@@ -44,8 +45,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut events = read_events("rust.yaml", now);
     events.extend(read_events("python.yaml", now));
 
+    let mut counts = HashMap::new();
+
     generate_text(&events)?;
     generate_html(&events, now, "all.html")?;
+    counts.insert("All", events.len());
 
     let python_events = events
         .iter()
@@ -60,7 +64,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .collect::<Vec<Event>>();
     generate_html(&rust_events, now, "rust.html")?;
 
-    generate_main_page(now)?;
+    generate_main_page(now, counts)?;
 
     Ok(())
 }
@@ -82,7 +86,10 @@ fn read_events(filename: &str, now: DateTime<FixedOffset>) -> Vec<Event> {
         .collect::<Vec<Event>>()
 }
 
-fn generate_main_page(now: DateTime<FixedOffset>) -> Result<(), Box<dyn std::error::Error>> {
+fn generate_main_page(
+    now: DateTime<FixedOffset>,
+    counts: HashMap<&str, usize>,
+) -> Result<(), Box<dyn std::error::Error>> {
     let template = include_str!("../templates/index.html");
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
@@ -93,6 +100,7 @@ fn generate_main_page(now: DateTime<FixedOffset>) -> Result<(), Box<dyn std::err
     let globals = liquid::object!({
         "title": "Virtual Events",
         "now": now.to_string(),
+        "counts": counts,
     });
     let output = template.render(&globals).unwrap();
 
