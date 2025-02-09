@@ -7,6 +7,10 @@ use std::fs;
 use fs_extra::copy_items;
 use fs_extra::dir;
 
+use strum::IntoEnumIterator;
+use strum_macros::EnumIter;
+
+
 #[derive(Deserialize, Serialize, Debug, PartialEq, Clone)]
 enum Language {
     English,
@@ -14,7 +18,7 @@ enum Language {
     Hebrew,
 }
 
-#[derive(Deserialize, Serialize, Debug, PartialEq, Clone)]
+#[derive(EnumIter, Deserialize, Serialize, Debug, PartialEq, Clone)]
 enum Category {
     Perl,
     Python,
@@ -49,20 +53,21 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     generate_text(&events)?;
     generate_html(&events, now, "all.html")?;
-    counts.insert("All", events.len());
+    counts.insert(String::from("All"), events.len());
 
-    let python_events = events
+    for category in Category::iter() {
+        let cat_str = format!("{:?}", category);
+
+        let cat_events = events
         .iter()
-        .filter(|event| event.category == Category::Python)
+        .filter(|event| event.category == category)
         .cloned()
         .collect::<Vec<Event>>();
-    generate_html(&python_events, now, "python.html")?;
+        counts.insert(cat_str.clone(), cat_events.len());
 
-    let rust_events = events
-        .into_iter()
-        .filter(|event| event.category == Category::Rust)
-        .collect::<Vec<Event>>();
-    generate_html(&rust_events, now, "rust.html")?;
+        generate_html(&cat_events, now, format!("{}.html", cat_str.to_lowercase()).as_str())?;
+    }
+
 
     generate_main_page(now, counts)?;
 
@@ -88,7 +93,7 @@ fn read_events(filename: &str, now: DateTime<FixedOffset>) -> Vec<Event> {
 
 fn generate_main_page(
     now: DateTime<FixedOffset>,
-    counts: HashMap<&str, usize>,
+    counts: HashMap<String, usize>,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let template = include_str!("../templates/index.html");
     let template = liquid::ParserBuilder::with_stdlib()
