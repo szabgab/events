@@ -10,7 +10,7 @@ use fs_extra::dir;
 use strum::IntoEnumIterator;
 use strum_macros::EnumIter;
 
-#[derive(Deserialize, Serialize, Debug, PartialEq, Clone)]
+#[derive(EnumIter, Deserialize, Serialize, Debug, PartialEq, Clone)]
 enum Language {
     English,
     French,
@@ -69,6 +69,29 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             now,
             format!("{}.html", cat_str.to_lowercase()).as_str(),
         )?;
+
+        for language in Language::iter() {
+            let language_str = format!("{:?}", language);
+
+            let these_events = cat_events
+                .iter()
+                .filter(|event| event.language == language)
+                .cloned()
+                .collect::<Vec<Event>>();
+
+            counts.insert(format!("{}-{}", cat_str, language_str), these_events.len());
+
+            generate_html(
+                &these_events,
+                now,
+                format!(
+                    "{}-{}.html",
+                    cat_str.to_lowercase(),
+                    language_str.to_lowercase()
+                )
+                .as_str(),
+            )?;
+        }
     }
 
     let mut counts = counts.iter().collect::<Vec<_>>();
