@@ -10,7 +10,6 @@ use fs_extra::dir;
 use strum::IntoEnumIterator;
 use strum_macros::EnumIter;
 
-
 #[derive(Deserialize, Serialize, Debug, PartialEq, Clone)]
 enum Language {
     English,
@@ -59,16 +58,22 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let cat_str = format!("{:?}", category);
 
         let cat_events = events
-        .iter()
-        .filter(|event| event.category == category)
-        .cloned()
-        .collect::<Vec<Event>>();
+            .iter()
+            .filter(|event| event.category == category)
+            .cloned()
+            .collect::<Vec<Event>>();
         counts.insert(cat_str.clone(), cat_events.len());
 
-        generate_html(&cat_events, now, format!("{}.html", cat_str.to_lowercase()).as_str())?;
+        generate_html(
+            &cat_events,
+            now,
+            format!("{}.html", cat_str.to_lowercase()).as_str(),
+        )?;
     }
 
-
+    let mut counts = counts.iter().collect::<Vec<_>>();
+    counts.sort_by_key(|entry| entry.1);
+    counts.reverse();
     generate_main_page(now, counts)?;
 
     Ok(())
@@ -93,7 +98,7 @@ fn read_events(filename: &str, now: DateTime<FixedOffset>) -> Vec<Event> {
 
 fn generate_main_page(
     now: DateTime<FixedOffset>,
-    counts: HashMap<String, usize>,
+    counts: Vec<(&String, &usize)>,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let template = include_str!("../templates/index.html");
     let template = liquid::ParserBuilder::with_stdlib()
