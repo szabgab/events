@@ -50,7 +50,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut counts = HashMap::new();
 
-    generate_text(&events)?;
+    generate_text(&events, "all.txt")?;
     generate_html(&events, now, "all.html")?;
     counts.insert(String::from("All"), events.len());
 
@@ -63,6 +63,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .cloned()
             .collect::<Vec<Event>>();
         counts.insert(cat_str.clone(), cat_events.len());
+
+        generate_text(&events, format!("{}.txt", cat_str.to_lowercase()).as_str())?;
 
         generate_html(
             &cat_events,
@@ -166,7 +168,7 @@ fn generate_html(
     Ok(())
 }
 
-fn generate_text(events: &[Event]) -> Result<(), Box<dyn std::error::Error>> {
+fn generate_text(events: &[Event], filename: &str) -> Result<(), Box<dyn std::error::Error>> {
     let template = include_str!("../templates/text.txt");
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
@@ -179,6 +181,6 @@ fn generate_text(events: &[Event]) -> Result<(), Box<dyn std::error::Error>> {
     });
     let output = template.render(&globals).unwrap();
 
-    std::fs::write("_site/rust.txt", output)?;
+    std::fs::write(format!("_site/{filename}"), output)?;
     Ok(())
 }
