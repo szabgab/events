@@ -10,6 +10,8 @@ use fs_extra::dir;
 use strum::IntoEnumIterator;
 use strum_macros::EnumIter;
 
+use ical::generator::{Emitter, IcalCalendarBuilder};
+
 #[derive(EnumIter, Deserialize, Serialize, Debug, PartialEq, Clone)]
 enum Language {
     English,
@@ -50,6 +52,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut counts = HashMap::new();
 
+    generate_ical(&events, "all.ical")?;
     generate_text(&events, "all.txt")?;
     generate_html(&events, now, "all.html")?;
     counts.insert(String::from("All"), events.len());
@@ -140,6 +143,29 @@ fn generate_main_page(
     let output = template.render(&globals).unwrap();
 
     std::fs::write(format!("_site/index.html"), output)?;
+    Ok(())
+}
+
+fn generate_ical(events: &[Event], filename: &str) -> Result<(), Box<dyn std::error::Error>> {
+    let cal = IcalCalendarBuilder::version("2.0")
+        .gregorian()
+        .prodid("-//ical-rs//github.com//")
+        .build();
+
+    for event in events {
+        println!("{}", event.start);
+        // let event = IcalEventBuilder::tzid("Europe/Berlin")
+        // .uid("UID for identifying this event.")
+        // .changed("20210115")
+        // .one_day("20220101")
+        // .set(ical_property!("SUMMARY", "New Year"))
+        // .build();
+        // cal.events.push(event);
+    }
+
+    let output = cal.generate();
+    std::fs::write(format!("_site/{filename}"), output)?;
+
     Ok(())
 }
 
