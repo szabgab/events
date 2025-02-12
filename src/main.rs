@@ -68,14 +68,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .collect::<Vec<Event>>();
         counts.insert(cat_str.clone(), cat_events.len());
 
-        generate_text(&events, format!("{}", cat_str.to_lowercase()).as_str())?;
-
-        generate_html(
-            &cat_events,
-            now,
-            format!("{}", cat_str.to_lowercase()).as_str(),
-        )?;
-
+        generate_page(now, &events, format!("{}", cat_str.to_lowercase()).as_str())?;
         for language in Language::iter() {
             let language_str = format!("{:?}", language);
 
@@ -87,15 +80,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
             counts.insert(format!("{}-{}", cat_str, language_str), these_events.len());
 
-            generate_html(
-                &these_events,
+            generate_page(
                 now,
-                format!(
-                    "{}-{}",
-                    cat_str.to_lowercase(),
-                    language_str.to_lowercase()
-                )
-                .as_str(),
+                &these_events,
+                format!("{}-{}", cat_str.to_lowercase(), language_str.to_lowercase()).as_str(),
             )?;
         }
     }
@@ -108,7 +96,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-fn generate_page(now: DateTime<FixedOffset>, events: &Vec<Event>, filename: &str) -> Result<(), Box<dyn Error>> {
+fn generate_page(
+    now: DateTime<FixedOffset>,
+    events: &Vec<Event>,
+    filename: &str,
+) -> Result<(), Box<dyn Error>> {
     generate_ical(events, filename)?;
     generate_text(events, filename)?;
     generate_html(events, now, filename)?;
