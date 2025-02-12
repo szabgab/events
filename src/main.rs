@@ -1,3 +1,5 @@
+use std::error::Error;
+
 use chrono::Datelike;
 use chrono::{DateTime, FixedOffset, Utc};
 use serde::{Deserialize, Serialize};
@@ -53,10 +55,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut counts = HashMap::new();
 
-    generate_ical(&events, "all")?;
-    generate_text(&events, "all")?;
-    generate_html(&events, now, "all")?;
-    generate_markdown(&events, now, "all")?;
+    generate_page(now, &events, "all")?;
     counts.insert(String::from("All"), events.len());
 
     for category in Category::iter() {
@@ -109,6 +108,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
+fn generate_page(now: DateTime<FixedOffset>, events: &Vec<Event>, filename: &str) -> Result<(), Box<dyn Error>> {
+    generate_ical(events, filename)?;
+    generate_text(events, filename)?;
+    generate_html(events, now, filename)?;
+    generate_markdown(events, now, filename)?;
+    Ok(())
+}
+
 fn read_events(filename: &str, now: DateTime<FixedOffset>) -> Vec<Event> {
     let text = fs::read_to_string(filename).unwrap();
 
@@ -129,7 +136,7 @@ fn read_events(filename: &str, now: DateTime<FixedOffset>) -> Vec<Event> {
 fn generate_main_page(
     now: DateTime<FixedOffset>,
     counts: Vec<(&String, &usize)>,
-) -> Result<(), Box<dyn std::error::Error>> {
+) -> Result<(), Box<dyn Error>> {
     let template = include_str!("../templates/index.html");
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
