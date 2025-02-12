@@ -203,7 +203,7 @@ fn generate_html(
     filename: &str,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let html = "";
-    let template = include_str!("../templates/page.html");
+    let template = include_str!("../templates/list.html");
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
         .unwrap()
@@ -223,7 +223,7 @@ fn generate_html(
 }
 
 fn generate_text(events: &[Event], filename: &str) -> Result<(), Box<dyn std::error::Error>> {
-    let template = include_str!("../templates/text.txt");
+    let template = include_str!("../templates/list.txt");
     let template = liquid::ParserBuilder::with_stdlib()
         .build()
         .unwrap()
