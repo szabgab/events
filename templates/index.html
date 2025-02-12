@@ -12,6 +12,14 @@
     <div class="container">
       <h1 class="title">{{title}}</h1>
       <div class="content">
+        We try to make it easier for you to locate online events in various topics that are happening at a time that is convenient for you.
+        <p>
+          For each topic and each spoken language we have a page listing all the events.
+          Feel free to send us additions and corrections. <a href="https://github.com/szabgab/events/">source</a>.
+          Updated at {{now}}.
+        </p>
+
+
         <ul>
           {% for entry in counts %}
             {% if entry[1] != 0 %}
