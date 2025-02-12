@@ -1,21 +1,3 @@
-- title: "Online: SD Python Saturday Study Group"
-  url: https://www.meetup.com/pythonsd/events/305219510/
-  name: San Diego Python Users Group
-  address: https://www.meetup.com/pythonsd/
-  language: English
-  category: Python
-  start: 2025-02-08T10:00:00-08:00
-  # PST
-
-- title: Pré-entrainement et finetuning des LLMs à partir de zéro (from scratch)
-  url: https://www.meetup.com/paris-python-machine-learning-deep-learning-meetup-group/events/305692321/
-  name: Python, Machine Learning and Deep Learning Meetup Group
-  address: https://www.meetup.com/paris-python-machine-learning-deep-learning-meetup-group/
-  language: French
-  category: Python
-  start: 2025-02-09T16:00:00+01:00
-  # CET
-
 
 - title: "Monday office hour"
   url: https://www.meetup.com/bostonpython/events/305001375/
@@ -52,6 +34,63 @@
   language: English
   category: Python
   start: 2025-02-14T19:00:00-05:00
+  # EST
+
+- title: "Online: SD Python Saturday Study Group"
+  url: https://www.meetup.com/pythonsd/events/305219511/
+  name: San Diego Python Users Group
+  address: https://www.meetup.com/pythonsd/
+  language: English
+  category: Python
+  start: 2025-02-15T10:00:00-08:00
+  # PST
+
+- title: Pré-entrainement et finetuning des LLMs à partir de zéro (from scratch)
+  url: https://www.meetup.com/paris-python-machine-learning-deep-learning-meetup-group/events/305692323/
+  name: Python, Machine Learning and Deep Learning Meetup Group
+  address: https://www.meetup.com/paris-python-machine-learning-deep-learning-meetup-group/
+  language: French
+  category: Python
+  start: 2025-02-16T16:00:00+01:00
+  # CET
+
+- title: Python Practitioners SIG
+  url: https://www.meetup.com/pythonnz-online/events/305963288/
+  name: Python New Zealand - Online Events
+  address: https://www.meetup.com/pythonnz-online/?eventOrigin=event_home_page
+  language: French
+  category: Python
+  start: 2025-02-17T12:15:00+13:00
+  # CET
+
+- title: Cultural Learnings of PostgreSQL for Make Benefit Glorious Company Product
+  url: https://www.meetup.com/pyweb-il/events/305279328/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: Hebrew
+  category: Rust
+  start: 2025-02-19T20:30:00+02:00
+  # ILT
+
+
+- title: SC Python - monthly meetup
+  url: https://www.meetup.com/santa-cruz-python/events/301921795/
+  name: Santa Cruz Python, Machine Learning & AI Meetup
+  address: https://www.meetup.com/santa-cruz-python/
+  language: English
+  category: Python
+  start: 2025-02-19T19:00:00-08:00
+  # PST
+
+
+
+- title: Grab a Byte! Career Conversation - PyLadies virtual lunch meetup
+  url: https://www.meetup.com/pyladies-boston/events/304456225/
+  name: PyLadies Boston
+  address: https://www.meetup.com/pyladies-boston/
+  language: English
+  category: Python
+  start: 2025-02-21T12:00:00-05:00
   # EST
 
 
