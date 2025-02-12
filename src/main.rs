@@ -53,10 +53,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut counts = HashMap::new();
 
-    generate_ical(&events, "all.ical")?;
-    generate_text(&events, "all.txt")?;
-    generate_html(&events, now, "all.html")?;
-    generate_markdown(&events, now, "all.md")?;
+    generate_ical(&events, "all")?;
+    generate_text(&events, "all")?;
+    generate_html(&events, now, "all")?;
+    generate_markdown(&events, now, "all")?;
     counts.insert(String::from("All"), events.len());
 
     for category in Category::iter() {
@@ -69,12 +69,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .collect::<Vec<Event>>();
         counts.insert(cat_str.clone(), cat_events.len());
 
-        generate_text(&events, format!("{}.txt", cat_str.to_lowercase()).as_str())?;
+        generate_text(&events, format!("{}", cat_str.to_lowercase()).as_str())?;
 
         generate_html(
             &cat_events,
             now,
-            format!("{}.html", cat_str.to_lowercase()).as_str(),
+            format!("{}", cat_str.to_lowercase()).as_str(),
         )?;
 
         for language in Language::iter() {
@@ -92,7 +92,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 &these_events,
                 now,
                 format!(
-                    "{}-{}.html",
+                    "{}-{}",
                     cat_str.to_lowercase(),
                     language_str.to_lowercase()
                 )
@@ -166,7 +166,7 @@ fn generate_ical(events: &[Event], filename: &str) -> Result<(), Box<dyn std::er
     }
 
     let output = cal.generate();
-    std::fs::write(format!("_site/{filename}"), output)?;
+    std::fs::write(format!("_site/{filename}.ical"), output)?;
 
     Ok(())
 }
@@ -193,7 +193,7 @@ fn generate_markdown(
     });
     let output = template.render(&globals).unwrap();
 
-    std::fs::write(format!("_site/{filename}"), output)?;
+    std::fs::write(format!("_site/{filename}.md"), output)?;
     Ok(())
 }
 
@@ -218,7 +218,7 @@ fn generate_html(
     });
     let output = template.render(&globals).unwrap();
 
-    std::fs::write(format!("_site/{filename}"), output)?;
+    std::fs::write(format!("_site/{filename}.html"), output)?;
     Ok(())
 }
 
@@ -235,6 +235,6 @@ fn generate_text(events: &[Event], filename: &str) -> Result<(), Box<dyn std::er
     });
     let output = template.render(&globals).unwrap();
 
-    std::fs::write(format!("_site/{filename}"), output)?;
+    std::fs::write(format!("_site/{filename}.txt"), output)?;
     Ok(())
 }
