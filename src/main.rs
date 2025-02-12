@@ -1,3 +1,4 @@
+use chrono::Datelike;
 use chrono::{DateTime, FixedOffset, Utc};
 use serde::{Deserialize, Serialize};
 use std::cmp::Ordering;
@@ -55,6 +56,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     generate_ical(&events, "all.ical")?;
     generate_text(&events, "all.txt")?;
     generate_html(&events, now, "all.html")?;
+    generate_markdown(&events, now, "all.md")?;
     counts.insert(String::from("All"), events.len());
 
     for category in Category::iter() {
@@ -166,6 +168,32 @@ fn generate_ical(events: &[Event], filename: &str) -> Result<(), Box<dyn std::er
     let output = cal.generate();
     std::fs::write(format!("_site/{filename}"), output)?;
 
+    Ok(())
+}
+
+fn generate_markdown(
+    events: &[Event],
+    now: DateTime<FixedOffset>,
+    filename: &str,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let title = format!("Online Rust events {}", now.month());
+    let text = format!("I found the following Rust-related online events for the next 10 days.");
+
+    let template = include_str!("../templates/list.md");
+    let template = liquid::ParserBuilder::with_stdlib()
+        .build()
+        .unwrap()
+        .parse(template)
+        .unwrap();
+
+    let globals = liquid::object!({
+        "title": title,
+        "text": text,
+        "events": events,
+    });
+    let output = template.render(&globals).unwrap();
+
+    std::fs::write(format!("_site/{filename}"), output)?;
     Ok(())
 }
 
