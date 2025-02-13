@@ -33,8 +33,8 @@
   address: https://www.meetup.com/pymntos-twin-cities-python-user-group/
   language: English
   category: Python
-  start: 2025-02-14T19:00:00-05:00
-  # EST
+  start: 2025-02-14T19:00:00-06:00
+  # CST
 
 - title: "Online: SD Python Saturday Study Group"
   url: https://www.meetup.com/pythonsd/events/305219511/
@@ -63,6 +63,15 @@
   start: 2025-02-17T12:15:00+13:00
   # CET
 
+- title: Python Meetup
+  url: https://www.meetup.com/tucson-python-meetup/events/306147229
+  name: Tucson Python Meetup
+  address: https://www.meetup.com/tucson-python-meetup/
+  language: English
+  category: Rust
+  start: 2025-02-18T18:00:00-07:00
+  # MST
+
 - title: Cultural Learnings of PostgreSQL for Make Benefit Glorious Company Product
   url: https://www.meetup.com/pyweb-il/events/305279328/
   name: Code Mavens
@@ -82,8 +91,6 @@
   start: 2025-02-19T19:00:00-08:00
   # PST
 
-
-
 - title: Grab a Byte! Career Conversation - PyLadies virtual lunch meetup
   url: https://www.meetup.com/pyladies-boston/events/304456225/
   name: PyLadies Boston
@@ -91,6 +98,15 @@
   language: English
   category: Python
   start: 2025-02-21T12:00:00-05:00
+  # EST
+
+- title: Python for Data Pipelines - Apache Airflow
+  url: https://www.meetup.com/nova-python/events/306122514/
+  name: NOVA-Python in VA Reston
+  address: https://www.meetup.com/nova-python/
+  language: English
+  category: Python
+  start: 2025-02-21T19:30:00-05:00
   # EST
 
 
