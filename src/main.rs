@@ -1,7 +1,7 @@
 use std::error::Error;
 
 use chrono::Datelike;
-use chrono::{DateTime, FixedOffset, Utc};
+use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 use std::cmp::Ordering;
 use std::collections::HashMap;
@@ -37,8 +37,19 @@ struct Event {
     name: String,
     address: String,
     language: Language,
-    start: String, // 2024-06-06T18:00:00+03:00
+    start: DateTime<Utc>, // 2024-06-06T18:00:00+03:00
     category: Category,
+
+    #[serde(default = "get_empty_string")]
+    utc: String,
+    #[serde(default = "get_empty_string")]
+    est: String,
+    #[serde(default = "get_empty_string")]
+    pst: String,
+}
+
+fn get_empty_string() -> String {
+    String::new()
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -47,7 +58,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let from_paths = vec!["static/js"];
     copy_items(&from_paths, "_site", &options)?;
 
-    let now: DateTime<FixedOffset> = Utc::now().fixed_offset();
+    let now: DateTime<Utc> = Utc::now();
     //println!("now:  {now}");
 
     let mut events = read_events("rust.yaml", now);
@@ -68,7 +79,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .collect::<Vec<Event>>();
         counts.insert(cat_str.clone(), cat_events.len());
 
-        generate_page(now, &events, format!("{}", cat_str.to_lowercase()).as_str())?;
+        generate_page(
+            now,
+            &cat_events,
+            format!("{}", cat_str.to_lowercase()).as_str(),
+        )?;
         for language in Language::iter() {
             let language_str = format!("{:?}", language);
 
@@ -97,7 +112,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 
 fn generate_page(
-    now: DateTime<FixedOffset>,
+    now: DateTime<Utc>,
     events: &Vec<Event>,
     filename: &str,
 ) -> Result<(), Box<dyn Error>> {
@@ -108,7 +123,7 @@ fn generate_page(
     Ok(())
 }
 
-fn read_events(filename: &str, now: DateTime<FixedOffset>) -> Vec<Event> {
+fn read_events(filename: &str, now: DateTime<Utc>) -> Vec<Event> {
     let text = fs::read_to_string(filename).unwrap();
 
     let events: Vec<Event> = serde_yaml::from_str(&text).unwrap_or_else(|err| {
@@ -116,17 +131,29 @@ fn read_events(filename: &str, now: DateTime<FixedOffset>) -> Vec<Event> {
         std::process::exit(1);
     });
 
-    events
+    let mut events = events
         .into_iter()
         .filter(|event| {
-            let dt = DateTime::parse_from_str(&event.start, "%Y-%m-%dT%H:%M:%S%z").unwrap();
+            let dt = &event.start;
             dt.cmp(&now) != Ordering::Less
         })
-        .collect::<Vec<Event>>()
+        .collect::<Vec<Event>>();
+
+    for event in events.iter_mut() {
+        let dt = event.start;
+        let utc = dt.format("%b %d %H:%M").to_string();
+        event.utc = utc;
+        let tz = chrono_tz::Tz::US__Eastern;
+        event.est = dt.with_timezone(&tz).format("%b %d %H:%M").to_string();
+        let tz = chrono_tz::Tz::US__Pacific;
+        event.pst = dt.with_timezone(&tz).format("%b %d %H:%M").to_string();
+    }
+
+    events
 }
 
 fn generate_main_page(
-    now: DateTime<FixedOffset>,
+    now: DateTime<Utc>,
     counts: Vec<(&String, &usize)>,
 ) -> Result<(), Box<dyn Error>> {
     let template = include_str!("../templates/index.html");
@@ -154,7 +181,7 @@ fn generate_ical(events: &[Event], filename: &str) -> Result<(), Box<dyn std::er
         .build();
 
     for event in events {
-        println!("{}", event.start);
+        println!("{} - {} - {}", event.start, event.utc, event.est);
         // let event = IcalEventBuilder::tzid("Europe/Berlin")
         // .uid("UID for identifying this event.")
         // .changed("20210115")
@@ -172,7 +199,7 @@ fn generate_ical(events: &[Event], filename: &str) -> Result<(), Box<dyn std::er
 
 fn generate_markdown(
     events: &[Event],
-    now: DateTime<FixedOffset>,
+    now: DateTime<Utc>,
     filename: &str,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let title = format!("Online Rust events {}", now.month());
@@ -198,7 +225,7 @@ fn generate_markdown(
 
 fn generate_html(
     events: &[Event],
-    now: DateTime<FixedOffset>,
+    now: DateTime<Utc>,
     filename: &str,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let html = "";

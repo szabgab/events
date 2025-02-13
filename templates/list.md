@@ -2,10 +2,10 @@
 
 {{text}}
 
-| Title | UTC | EST |
-| ------| --- | --- |
+| Title | UTC | EST | PST |
+| ------| --- | --- | --- |
 {% for event in events -%}
-| [{{event.title}}]({{event.url}}) | Feb 13 18:00 | Feb 13 13:00 |
+| [{{event.title}}]({{event.url}}) | {{event.utc}} | {{event.est}} | {{event.pst}} |
 {% endfor %}
 
 [source](https://events.code-maven.com/)
