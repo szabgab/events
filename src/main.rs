@@ -46,6 +46,9 @@ struct Event {
     est: String,
     #[serde(default = "get_empty_string")]
     pst: String,
+
+    #[serde(default = "get_empty_string")]
+    nzl: String,
 }
 
 fn get_empty_string() -> String {
@@ -147,6 +150,8 @@ fn read_events(filename: &str, now: DateTime<Utc>) -> Vec<Event> {
         event.est = dt.with_timezone(&tz).format("%b %d %H:%M").to_string();
         let tz = chrono_tz::Tz::US__Pacific;
         event.pst = dt.with_timezone(&tz).format("%b %d %H:%M").to_string();
+        let tz = chrono_tz::Tz::Pacific__Auckland;
+        event.nzl = dt.with_timezone(&tz).format("%b %d %H:%M").to_string();
     }
 
     events
