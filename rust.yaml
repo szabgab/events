@@ -119,13 +119,43 @@
   start: 2025-02-27T19:00:00+01:00
   # CET
 
+
+- title: "Intro to Rust"
+  url: https://www.eventbrite.com/e/intro-to-rust-tickets-1237517059839
+  name: Ardan Labs
+  address: https://www.eventbrite.com/o/ardan-labs-7092394651
+  language: English
+  category: Rust
+  start: 2025-02-27T11:00:00-05:00
+  # EST
+
+
 - title: Parsing command line options with category theory and async
   url: https://www.meetup.com/charlottesville-rust-meetup/events/305948365/
   name: Charlottesville Rust Meetup
   address: https://www.meetup.com/charlottesville-rust-meetup/
   language: English
   category: Rust
-  start: 2025-02-13T19:00:00-05:00
+  start: 2025-02-28T19:00:00-05:00
+
+- title: Rust Circle Meetup
+  url: https://www.eventbrite.com/e/rust-circle-meetup-tickets-628763176587
+  name: Rust Circle Kampala
+  address: https://www.eventbrite.com/o/rust-circle-kampala-65249289033/
+  language: English
+  category: Rust
+  start: 2025-03-01T09:00:00+00:00
+
+- title: Rust Nürnberg online
+  url: https://www.meetup.com/rust-noris/events/300820281/
+  name: Rust Nuremberg
+  address: https://www.meetup.com/rust-noris/
+  language: English
+  category: Rust
+  start: 2025-03-06T19:00:00+01:00
+  # CET - Central European Timezone
+  # CEST
+
 
 - title: Indy.rs - with Social Distancing
   url: https://www.meetup.com/indyrs/events/302031659/
@@ -136,5 +166,33 @@
   start: 2025-03-07T19:00:00-05:00
   # EST Eastern timezone (USA East coast)
   # EDT Eastern Daylight
+
+
+- title: "Bevy Game Dev Meetup #9"
+  url: https://www.meetup.com/bevy-game-development/events/306131557/
+  name: Bevy Game Development, Rotterdam, Netherlands
+  address: https://www.meetup.com/bevy-game-development/
+  language: English
+  category: Rust
+  start: 2025-03-06T20:00:00+01:00
+  # CET
+
+- title: Second Tuesday
+  url: https://www.meetup.com/dallasrust/events/303522529/
+  name: Dallas Rust
+  address: https://www.meetup.com/dallasrust/
+  language: English
+  category: Rust
+  start: 2025-03-11T20:00:00-06:00
+  # CDT
+
+- title: Community Catch Up
+  url: https://www.meetup.com/women-in-rust/events/305716839/
+  name: Women in Rust
+  address: https://www.meetup.com/women-in-rust/
+  language: English
+  category: Rust
+  start: 2025-03-11T13:00:00+00:00
+  # UTC
 
 
