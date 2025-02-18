@@ -69,7 +69,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut counts = HashMap::new();
 
-    generate_page(now, &events, "all")?;
+    generate_page(now, &events, "All")?;
     counts.insert(String::from("All"), events.len());
 
     for category in Category::iter() {
@@ -82,11 +82,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .collect::<Vec<Event>>();
         counts.insert(cat_str.clone(), cat_events.len());
 
-        generate_page(
-            now,
-            &cat_events,
-            format!("{}", cat_str.to_lowercase()).as_str(),
-        )?;
+        generate_page(now, &cat_events, &cat_str)?;
         for language in Language::iter() {
             let language_str = format!("{:?}", language);
 
@@ -101,7 +97,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             generate_page(
                 now,
                 &these_events,
-                format!("{}-{}", cat_str.to_lowercase(), language_str.to_lowercase()).as_str(),
+                format!("{cat_str}-{language_str}").as_str(),
             )?;
         }
     }
@@ -117,12 +113,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 fn generate_page(
     now: DateTime<Utc>,
     events: &Vec<Event>,
-    filename: &str,
+    cat_str: &str,
 ) -> Result<(), Box<dyn Error>> {
-    generate_ical(events, filename)?;
-    generate_text(events, filename)?;
-    generate_html(events, now, filename)?;
-    generate_markdown(events, now, filename)?;
+    let filename = cat_str.to_lowercase();
+
+    generate_ical(events, &filename)?;
+    generate_text(events, &filename)?;
+    generate_html(events, now, &filename)?;
+    generate_markdown(events, now, &filename)?;
     Ok(())
 }
 
