@@ -19,6 +19,7 @@ enum Language {
     English,
     French,
     Hebrew,
+    Spanish,
 }
 
 #[derive(EnumIter, Deserialize, Serialize, Debug, PartialEq, Clone)]
