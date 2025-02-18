@@ -2,7 +2,7 @@
 - title: "Monday office hour"
   url: https://www.meetup.com/bostonpython/events/305001375/
   name: The Boston Python User Group
-  address: https://www.meetup.com/bostonpython/events/305001375/
+  address: https://www.meetup.com/bostonpython/
   language: English
   category: Python
   start: 2025-02-10T12:00:00-05:00
@@ -57,7 +57,7 @@
 - title: Python Practitioners SIG
   url: https://www.meetup.com/pythonnz-online/events/305963288/
   name: Python New Zealand - Online Events
-  address: https://www.meetup.com/pythonnz-online/?eventOrigin=event_home_page
+  address: https://www.meetup.com/pythonnz-online/
   language: English
   category: Python
   start: 2025-02-17T12:15:00+13:00
@@ -82,7 +82,7 @@
   # ILT
 
 
-- title: SC Python - monthly meetup
+- title: "Keeping up with AI trends: DeepSeek o1, Titans, and more"
   url: https://www.meetup.com/santa-cruz-python/events/301921795/
   name: Santa Cruz Python, Machine Learning & AI Meetup
   address: https://www.meetup.com/santa-cruz-python/
@@ -108,5 +108,51 @@
   category: Python
   start: 2025-02-21T19:30:00-05:00
   # EST
+
+- title: "Online: SD Python Saturday Study Group"
+  url: https://www.meetup.com/pythonsd/events/305219512/
+  name: San Diego Python Users Group
+  address: https://www.meetup.com/pythonsd/
+  language: English
+  category: Python
+  start: 2025-02-22T10:00:00-08:00
+  # PST
+
+- title: Pré-entrainement et finetuning des LLMs à partir de zéro (from scratch)
+  url: https://www.meetup.com/paris-python-machine-learning-deep-learning-meetup-group/events/305692326/
+  name: Python, Machine Learning and Deep Learning Meetup Group
+  address: https://www.meetup.com/paris-python-machine-learning-deep-learning-meetup-group/
+  language: French
+  category: Python
+  start: 2025-02-23T16:00:00+01:00
+  # CET
+
+- title: "Monday office hour"
+  url: https://www.meetup.com/bostonpython/events/305001377/
+  name: The Boston Python User Group
+  address: https://www.meetup.com/bostonpython/
+  language: English
+  category: Python
+  start: 2025-02-24T12:00:00-05:00
+  # EST
+
+
+- title: Pythonic Monthly Meeting
+  url: https://www.meetup.com/orlandopython/events/305517915/
+  name: The Orlando Python User Group
+  address: https://www.meetup.com/orlandopython/
+  language: English
+  category: Python
+  start: 2025-02-25T19:00:00-05:00
+  # EST
+
+- title: Una mirada tras bastidores a la innovación meteorológica de Google
+  url: https://www.meetup.com/pythonbaq/events/306220996/
+  name: Python Barranquilla, Colombia
+  address: https://www.meetup.com/pythonbaq/
+  language: Spanish
+  category: Python
+  start: 2025-02-28T19:00:00-05:00
+  # COT (like EST)
 
 
