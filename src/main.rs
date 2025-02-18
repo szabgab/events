@@ -1,7 +1,6 @@
 use std::error::Error;
 
-use chrono::Datelike;
-use chrono::{DateTime, Utc};
+use chrono::{DateTime, Duration, Utc};
 use serde::{Deserialize, Serialize};
 use std::cmp::Ordering;
 use std::collections::HashMap;
@@ -92,12 +91,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .cloned()
                 .collect::<Vec<Event>>();
 
-            counts.insert(format!("{}-{}", cat_str, language_str), these_events.len());
+            counts.insert(format!("{cat_str}-in-{language_str}"), these_events.len());
 
             generate_page(
                 now,
                 &these_events,
-                format!("{cat_str}-{language_str}").as_str(),
+                format!("{cat_str} in {language_str}").as_str(),
             )?;
         }
     }
@@ -115,12 +114,12 @@ fn generate_page(
     events: &Vec<Event>,
     cat_str: &str,
 ) -> Result<(), Box<dyn Error>> {
-    let filename = cat_str.to_lowercase();
+    let filename = cat_str.to_lowercase().replace(" ", "-");
 
     generate_ical(events, &filename)?;
     generate_text(events, &filename)?;
-    generate_html(events, now, &filename)?;
-    generate_markdown(events, now, &filename)?;
+    generate_html(events, now, cat_str, &filename)?;
+    generate_markdown(events, now, cat_str, &filename)?;
     Ok(())
 }
 
@@ -203,10 +202,13 @@ fn generate_ical(events: &[Event], filename: &str) -> Result<(), Box<dyn std::er
 fn generate_markdown(
     events: &[Event],
     now: DateTime<Utc>,
+    title: &str,
     filename: &str,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let title = format!("Online Rust events {}", now.month());
-    let text = format!("I found the following Rust-related online events for the next 10 days.");
+    let days = 10;
+    let end = now + Duration::days(days);
+    let text = format!("I found the following {title}-related online events for the next {days} days.");
+    let title = format!("Online events: {title} ({}-{})", now.format("%b %d"), end.format("%b %d"));
 
     let template = include_str!("../templates/list.md");
     let template = liquid::ParserBuilder::with_stdlib()
@@ -229,6 +231,7 @@ fn generate_markdown(
 fn generate_html(
     events: &[Event],
     now: DateTime<Utc>,
+    title: &str,
     filename: &str,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let html = "";
@@ -242,7 +245,7 @@ fn generate_html(
     let globals = liquid::object!({
         "content": &html,
         "events": events,
-        "title": "Virtual Events",
+        "title": format!("Virtual Events: {title}"),
         "now": now.to_string(),
     });
     let output = template.render(&globals).unwrap();
