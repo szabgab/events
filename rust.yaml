@@ -195,4 +195,40 @@
   start: 2025-03-11T13:00:00+00:00
   # UTC
 
+- title: Parsing with Winnow in Rust by Kenny Flegal
+  url: https://www.meetup.com/code-mavens/events/305793122/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  category: Rust
+  start: 2025-03-04T20:30:00+02:00
+  # ILT
 
+- title: Ratatui - Terminal User Interfaces in Rust by Orhun Parmaksız
+  url: https://www.meetup.com/code-mavens/events/305750365/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  category: Rust
+  start: 2025-03-06T20:30:00+02:00
+  # ILT
+
+
+- title: Creating A Mock Blockchain in Rust by Sourav Mishra
+  url: https://www.meetup.com/code-mavens/events/305587087/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  category: Rust
+  start: 2025-03-09T11:00:00+02:00
+  # ILT
+
+
+- title: "crum: Complex Numbers and Complex Matrices in Rust by Frans Slabber"
+  url: https://www.meetup.com/code-mavens/events/305823397/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  category: Rust
+  start: 2025-03-18T20:30:00+02:00
+  # ILT

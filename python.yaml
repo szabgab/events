@@ -75,7 +75,7 @@
 - title: Cultural Learnings of PostgreSQL for Make Benefit Glorious Company Product
   url: https://www.meetup.com/pyweb-il/events/305279328/
   name: Code Mavens
-  address: https://www.meetup.com/code-mavens/
+  address: https://www.meetup.com/pyweb-il/
   language: Hebrew
   category: Rust
   start: 2025-02-19T20:30:00+02:00
@@ -90,6 +90,15 @@
   category: Python
   start: 2025-02-19T19:00:00-08:00
   # PST
+
+- title: Simulations for the Mathematically Challenged by Miki Tebeka
+  url: https://www.meetup.com/code-mavens/events/305223619/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  category: Python
+  start: 2025-02-20T20:30:00+02:00
+  # ILT
 
 - title: Grab a Byte! Career Conversation - PyLadies virtual lunch meetup
   url: https://www.meetup.com/pyladies-boston/events/304456225/
@@ -146,6 +155,15 @@
   start: 2025-02-25T19:00:00-05:00
   # EST
 
+- title: Reducing your memory footprint by 75% with 6 lines by Tomer Brisker
+  url: https://www.meetup.com/code-mavens/events/305492369/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  category: Python
+  start: 2025-02-25T20:30:00+02:00
+  # ILT
+
 - title: Una mirada tras bastidores a la innovación meteorológica de Google
   url: https://www.meetup.com/pythonbaq/events/306220996/
   name: Python Barranquilla, Colombia
@@ -154,5 +172,24 @@
   category: Python
   start: 2025-02-28T19:00:00-05:00
   # COT (like EST)
+
+- title: daffodil, data frames for optimized data inspection and logical processing by Ray Lutz
+  url: https://www.meetup.com/code-mavens/events/305731787/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  category: Python
+  start: 2025-03-05T20:30:00+02:00
+  # ILT
+
+- title: Using Streamlit to create interactive web apps & deploy machine learning models by Leah Levy
+  url: https://www.meetup.com/code-mavens/events/305584832/
+  name: Code Mavens
+  address: https://www.meetup.com/code-mavens/
+  language: English
+  category: Python
+  start: 2025-03-11T20:30:00+02:00
+  # ILT
+
 
 
