@@ -1,87 +1,3 @@
-- title: Indy.rs - with Social Distancing
-  url: https://www.meetup.com/indyrs/events/302031658/
-  name: Indy Rust
-  address: https://www.meetup.com/indyrs/
-  language: English
-  category: Rust
-  start: 2025-02-05T19:00:00-05:00
-  # EST Eastern timezone (USA East coast)
-  # EDT Eastern Daylight
-
-- title: Rust Nürnberg online
-  url: https://www.meetup.com/rust-noris/events/300820280/
-  name: Rust Nuremberg
-  address: https://www.meetup.com/rust-noris/
-  language: English
-  category: Rust
-  start: 2025-02-06T19:00:00+01:00
-  # CET - Central European Timezone
-  # CEST
-
-- title: Rust Coding / Game Dev Fridays Open Mob Session!
-  url: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/events/gvxrntyhcdbkb/
-  name: Jersey City Classy and Curious Coders Club Cooperative
-  address: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/
-  language: English
-  category: Rust
-  start: 2025-02-07T15:00:00-05:00
-  # EST
-
-- title: "Meet Elusion: New DataFrame Library powered by Rust 🦀 with Borivoj Grujicic"
-  url: https://www.meetup.com/code-mavens/events/305513416/
-  name: Code Mavens
-  address: https://www.meetup.com/code-mavens/
-  language: English
-  category: Rust
-  start: 2025-02-11T20:30:00+02:00
-  # ILT
-
-- title: Rust Hack and Learn
-  url: https://www.meetup.com/rust-berlin/events/299468342/
-  name: Rust Berlin
-  address: https://www.meetup.com/rust-berlin/
-  language: English
-  category: Rust
-  start: 2025-02-13T19:00:00+01:00
-  # CET
-
-- title: Rust Coding / Game Dev Fridays Open Mob Session!
-  url: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/events/305815307/
-  name: Jersey City Classy and Curious Coders Club Cooperative
-  address: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/
-  language: English
-  category: Rust
-  start: 2025-02-14T15:00:00-05:00
-  # EST
-
-- title: Pointer Provenance
-  url: https://www.meetup.com/vancouver-rust/events/304051783/
-  name: Vancouver Rust
-  address: https://www.meetup.com/vancouver-rust/
-  language: English
-  category: Rust
-  start: 2025-02-19T18:00:00-07:00
-  # PST
-
-
-- title: February, 2025 SRUG (Seattle Rust User Group) Meetup
-  url: https://www.meetup.com/join-srug/events/305658424/
-  name: Seattle Rust User Group
-  address: https://www.meetup.com/join-srug/
-  language: English
-  category: Rust
-  start: 2025-02-20T18:00:00-07:00
-  # PST
-
-- title: Rust Coding / Game Dev Fridays Open Mob Session!
-  url: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/events/gvxrntyhcdbcc/
-  name: Jersey City Classy and Curious Coders Club Cooperative
-  address: https://www.meetup.com/jersey-city-classy-curious-coders-club-cooperative/
-  language: English
-  category: Rust
-  start: 2025-02-21T15:00:00-05:00
-  # EST
-
 - title: Last Tuesday
   url: https://www.meetup.com/dallasrust/events/305361428/
   name: Dallas Rust
@@ -223,6 +139,15 @@
   start: 2025-03-09T11:00:00+02:00
   # ILT
 
+- title: Rust Hack and Learn
+  url: https://www.meetup.com/rust-berlin/events/300820296/
+  name: Rust Berlin
+  address: https://www.meetup.com/rust-berlin/
+  language: English
+  category: Rust
+  start: 2025-03-13T19:00:00+01:00
+  # CET
+
 
 - title: "crum: Complex Numbers and Complex Matrices in Rust by Frans Slabber"
   url: https://www.meetup.com/code-mavens/events/305823397/
@@ -232,3 +157,53 @@
   category: Rust
   start: 2025-03-18T20:30:00+02:00
   # ILT
+
+- title: Mid-month Rustful
+  url: https://www.meetup.com/rustdc/events/305170694/
+  name: Rust DC
+  address: https://www.meetup.com/rustdc/
+  language: English
+  category: Rust
+  start: 2025-03-18T19:00:00-05:00
+  # EST
+
+- title: Rust Study/Hack/Hang-out
+  url: https://www.meetup.com/vancouver-rust/events/305470139/
+  name: Vancouver Rust
+  address: https://www.meetup.com/vancouver-rust/
+  language: English
+  category: Rust
+  start: 2025-03-19T18:00:00-06:00
+  # PDT
+
+
+- title: Rust Hack and Learn
+  url: https://www.meetup.com/rust-berlin/events/300820297/
+  name: Rust Berlin
+  address: https://www.meetup.com/rust-berlin/
+  language: English
+  category: Rust
+  start: 2025-03-27T19:00:00+01:00
+  # CET
+
+
+
+- title: Rust Hack and Learn
+  url: https://www.meetup.com/rust-berlin/events/300820298/
+  name: Rust Berlin
+  address: https://www.meetup.com/rust-berlin/
+  language: English
+  category: Rust
+  start: 2025-04-10T19:00:00+02:00
+  # CEST
+
+- title: Mid-month Rustful
+  url: https://www.meetup.com/rustdc/events/305170698/
+  name: Rust DC
+  address: https://www.meetup.com/rustdc/
+  language: English
+  category: Rust
+  start: 2025-04-15T19:00:00-05:00
+  # EST
+
+
